@@ -15,6 +15,16 @@
 		2DE141DF282AF2F100AD741E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DE141DD282AF2F100AD741E /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		2DE141FE282AF30800AD741E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2DE141FA282AF30800AD741E /* amplience-sdk-ios.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2DE141F0282AF30800AD741E;
+			remoteInfo = "amplience-sdk-ios";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		2DE141CF282AF2F000AD741E /* amplience-sdk-ios-full.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "amplience-sdk-ios-full.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DE141D2282AF2F000AD741E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +34,7 @@
 		2DE141DB282AF2F100AD741E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2DE141DE282AF2F100AD741E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2DE141E0282AF2F100AD741E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DE141FA282AF30800AD741E /* amplience-sdk-ios.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "amplience-sdk-ios.xcodeproj"; path = "amplience-sdk-ios/amplience-sdk-ios.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +51,7 @@
 		2DE141C6282AF2F000AD741E = {
 			isa = PBXGroup;
 			children = (
+				2DE141FA282AF30800AD741E /* amplience-sdk-ios.xcodeproj */,
 				2DE141D1282AF2F000AD741E /* amplience-sdk-ios-full */,
 				2DE141D0282AF2F000AD741E /* Products */,
 			);
@@ -65,6 +77,14 @@
 				2DE141E0282AF2F100AD741E /* Info.plist */,
 			);
 			path = "amplience-sdk-ios-full";
+			sourceTree = "<group>";
+		};
+		2DE141FB282AF30800AD741E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2DE141FF282AF30800AD741E /* amplience_sdk_ios.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -113,12 +133,28 @@
 			mainGroup = 2DE141C6282AF2F000AD741E;
 			productRefGroup = 2DE141D0282AF2F000AD741E /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 2DE141FB282AF30800AD741E /* Products */;
+					ProjectRef = 2DE141FA282AF30800AD741E /* amplience-sdk-ios.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				2DE141CE282AF2F000AD741E /* amplience-sdk-ios-full */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		2DE141FF282AF30800AD741E /* amplience_sdk_ios.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = amplience_sdk_ios.framework;
+			remoteRef = 2DE141FE282AF30800AD741E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		2DE141CD282AF2F000AD741E /* Resources */ = {
