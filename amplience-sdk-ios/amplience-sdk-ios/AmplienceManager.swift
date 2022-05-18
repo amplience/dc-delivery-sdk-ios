@@ -16,7 +16,7 @@ class AmplienceManager {
     
     var generateBaseUrl: String {
         get {
-            return "https://\(hub).cdn.content.amplience.net"
+            return "https://\(hub!).cdn.content.amplience.net"
         }
     }
     
