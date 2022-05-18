@@ -20,5 +20,5 @@ struct FilterRequest: Codable {
     let filterBy: Array<FilterBy>
     let sortBy: SortBy?
     let page: Page?
-    let parameters: Parameters = Parameters()
+    var parameters: Parameters = Parameters()
 }
