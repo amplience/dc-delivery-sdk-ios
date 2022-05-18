@@ -77,13 +77,13 @@ class ImageUrlBuilder {
      */
     func format(format: Format, quality: Int? = nil) {
         self.format = format
-        if format is Webp {
+        if format == .Webp {
             formatQuality = Webp(quality: quality)
-        } else if format is Jpeg {
+        } else if format == .Jp2 {
             formatQuality = Jp2(quality: quality)
-        } else if format is Jpeg {
+        } else if format == .Jpeg {
             formatQuality = Jpeg(quality: quality)
-        } else if format is Png {
+        } else if format == .Png {
             formatQuality = Png(quality: quality)
         } else {
             formatQuality = nil
