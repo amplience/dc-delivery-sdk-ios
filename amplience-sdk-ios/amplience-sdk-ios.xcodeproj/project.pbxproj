@@ -34,6 +34,7 @@
 		B0262B9F2835315C00510C8F /* Unsharp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0262B9E2835315C00510C8F /* Unsharp.swift */; };
 		B0262BA12835317B00510C8F /* Upscale.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0262BA02835317B00510C8F /* Upscale.swift */; };
 		B0262BA3283537B100510C8F /* EdgeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0262BA2283537B100510C8F /* EdgeType.swift */; };
+		B0262BA628353A9500510C8F /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0262BA528353A9500510C8F /* Image.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		B0262B9E2835315C00510C8F /* Unsharp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unsharp.swift; sourceTree = "<group>"; };
 		B0262BA02835317B00510C8F /* Upscale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Upscale.swift; sourceTree = "<group>"; };
 		B0262BA2283537B100510C8F /* EdgeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeType.swift; sourceTree = "<group>"; };
+		B0262BA528353A9500510C8F /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		2DE141F2282AF30800AD741E /* amplience-sdk-ios */ = {
 			isa = PBXGroup;
 			children = (
+				B0262BA428353A8F00510C8F /* Media */,
 				B0262B6E2834E6CC00510C8F /* Models */,
 				2DE141F3282AF30800AD741E /* amplience_sdk_ios.h */,
 				B0262B6C2834DFA200510C8F /* AmplienceManager.swift */,
@@ -142,6 +145,14 @@
 				B0262BA2283537B100510C8F /* EdgeType.swift */,
 			);
 			path = "Image handling";
+			sourceTree = "<group>";
+		};
+		B0262BA428353A8F00510C8F /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				B0262BA528353A9500510C8F /* Image.swift */,
+			);
+			path = Media;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0262B992835301300510C8F /* ResizeAlgorithm.swift in Sources */,
+				B0262BA628353A9500510C8F /* Image.swift in Sources */,
 				B0262B782834E80600510C8F /* Parameters.swift in Sources */,
 				B0262B842834E91900510C8F /* SortBy.swift in Sources */,
 				B0262B8B2834EB3D00510C8F /* CompositeMode.swift in Sources */,
