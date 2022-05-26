@@ -34,7 +34,7 @@
 		B0262B9F2835315C00510C8F /* Unsharp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0262B9E2835315C00510C8F /* Unsharp.swift */; };
 		B0262BA12835317B00510C8F /* Upscale.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0262BA02835317B00510C8F /* Upscale.swift */; };
 		B0262BA3283537B100510C8F /* EdgeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0262BA2283537B100510C8F /* EdgeType.swift */; };
-		B0262BA628353A9500510C8F /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0262BA528353A9500510C8F /* Image.swift */; };
+		B0262BA628353A9500510C8F /* AmplienceImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0262BA528353A9500510C8F /* AmplienceImage.swift */; };
 		B08C2EBF283F85F00000B1AE /* TextLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08C2EBE283F85F00000B1AE /* TextLayer.swift */; };
 		B08C2EC1283F860B0000B1AE /* Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08C2EC0283F860B0000B1AE /* Layer.swift */; };
 		B08C2EC3283F882D0000B1AE /* TextAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08C2EC2283F882D0000B1AE /* TextAttributes.swift */; };
@@ -43,6 +43,7 @@
 		B08C2ECE283F95BD0000B1AE /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08C2ECD283F95BD0000B1AE /* BaseRequest.swift */; };
 		B08C2ED0283F95D30000B1AE /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08C2ECF283F95D30000B1AE /* NetworkingError.swift */; };
 		B08C2ED4283FA0250000B1AE /* AnyCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08C2ED3283FA0250000B1AE /* AnyCodable.swift */; };
+		B08C2EE1283FADBF0000B1AE /* AmplienceVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08C2EE0283FADBF0000B1AE /* AmplienceVideo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,7 +75,7 @@
 		B0262B9E2835315C00510C8F /* Unsharp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unsharp.swift; sourceTree = "<group>"; };
 		B0262BA02835317B00510C8F /* Upscale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Upscale.swift; sourceTree = "<group>"; };
 		B0262BA2283537B100510C8F /* EdgeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeType.swift; sourceTree = "<group>"; };
-		B0262BA528353A9500510C8F /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		B0262BA528353A9500510C8F /* AmplienceImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmplienceImage.swift; sourceTree = "<group>"; };
 		B08C2EBE283F85F00000B1AE /* TextLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLayer.swift; sourceTree = "<group>"; };
 		B08C2EC0283F860B0000B1AE /* Layer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layer.swift; sourceTree = "<group>"; };
 		B08C2EC2283F882D0000B1AE /* TextAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAttributes.swift; sourceTree = "<group>"; };
@@ -83,6 +84,7 @@
 		B08C2ECD283F95BD0000B1AE /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
 		B08C2ECF283F95D30000B1AE /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
 		B08C2ED3283FA0250000B1AE /* AnyCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyCodable.swift; sourceTree = "<group>"; };
+		B08C2EE0283FADBF0000B1AE /* AmplienceVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmplienceVideo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,7 +175,8 @@
 		B0262BA428353A8F00510C8F /* Media */ = {
 			isa = PBXGroup;
 			children = (
-				B0262BA528353A9500510C8F /* Image.swift */,
+				B0262BA528353A9500510C8F /* AmplienceImage.swift */,
+				B08C2EE0283FADBF0000B1AE /* AmplienceVideo.swift */,
 			);
 			path = Media;
 			sourceTree = "<group>";
@@ -268,7 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0262B992835301300510C8F /* ResizeAlgorithm.swift in Sources */,
-				B0262BA628353A9500510C8F /* Image.swift in Sources */,
+				B0262BA628353A9500510C8F /* AmplienceImage.swift in Sources */,
 				B08C2ECE283F95BD0000B1AE /* BaseRequest.swift in Sources */,
 				B0262B782834E80600510C8F /* Parameters.swift in Sources */,
 				B0262B842834E91900510C8F /* SortBy.swift in Sources */,
@@ -279,6 +282,7 @@
 				B0262B9728352E7E00510C8F /* ImageUrlBuilder.swift in Sources */,
 				B0262B802834E8CE00510C8F /* PageData.swift in Sources */,
 				B0262B9F2835315C00510C8F /* Unsharp.swift in Sources */,
+				B08C2EE1283FADBF0000B1AE /* AmplienceVideo.swift in Sources */,
 				B08C2EC7283F8BE10000B1AE /* ImageLayer.swift in Sources */,
 				B08C2EC3283F882D0000B1AE /* TextAttributes.swift in Sources */,
 				B0262B702834E6DD00510C8F /* ContentResponse.swift in Sources */,

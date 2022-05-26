@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Image{
+public struct AmplienceImage: Codable {
     let id: String
     let name: String
     let endpoint: String

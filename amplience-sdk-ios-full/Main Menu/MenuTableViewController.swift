@@ -12,7 +12,7 @@ class MenuTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(AmplienceManager.shared.freshApiKey)
+        
     }
 
     // MARK: - Table view data source

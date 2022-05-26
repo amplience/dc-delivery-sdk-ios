@@ -8,7 +8,7 @@
 import Foundation
 
 
-class ImageUrlBuilder {
+public class ImageUrlBuilder {
     private var width: Int? = nil
     private var height: Int? = nil
     private var maxWidth: Int? = nil

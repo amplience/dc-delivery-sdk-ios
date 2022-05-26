@@ -14,6 +14,8 @@
 		2DE141DF282AF2F100AD741E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DE141DD282AF2F100AD741E /* LaunchScreen.storyboard */; };
 		B08C2ED6283FA2330000B1AE /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08C2ED5283FA2330000B1AE /* MenuTableViewController.swift */; };
 		B08C2ED9283FA36F0000B1AE /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08C2ED8283FA36F0000B1AE /* MenuTableViewCell.swift */; };
+		B08C2EDB283FA4040000B1AE /* BannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08C2EDA283FA4040000B1AE /* BannerViewController.swift */; };
+		B08C2EE4283FBDB60000B1AE /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08C2EE3283FBDB60000B1AE /* Banner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,8 @@
 		2DE141FA282AF30800AD741E /* amplience-sdk-ios.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "amplience-sdk-ios.xcodeproj"; path = "amplience-sdk-ios/amplience-sdk-ios.xcodeproj"; sourceTree = "<group>"; };
 		B08C2ED5283FA2330000B1AE /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		B08C2ED8283FA36F0000B1AE /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		B08C2EDA283FA4040000B1AE /* BannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerViewController.swift; sourceTree = "<group>"; };
+		B08C2EE3283FBDB60000B1AE /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,14 +74,15 @@
 		2DE141D1282AF2F000AD741E /* amplience-sdk-ios-full */ = {
 			isa = PBXGroup;
 			children = (
+				B08C2EE2283FBDAB0000B1AE /* Example custom model */,
+				B08C2EDD283FA4150000B1AE /* Examples */,
+				B08C2EDC283FA4080000B1AE /* Main Menu */,
 				2DE141D2282AF2F000AD741E /* AppDelegate.swift */,
 				2DE141D4282AF2F000AD741E /* SceneDelegate.swift */,
-				B08C2ED5283FA2330000B1AE /* MenuTableViewController.swift */,
 				2DE141D8282AF2F000AD741E /* Main.storyboard */,
 				2DE141DB282AF2F100AD741E /* Assets.xcassets */,
 				2DE141DD282AF2F100AD741E /* LaunchScreen.storyboard */,
 				2DE141E0282AF2F100AD741E /* Info.plist */,
-				B08C2ED8283FA36F0000B1AE /* MenuTableViewCell.swift */,
 			);
 			path = "amplience-sdk-ios-full";
 			sourceTree = "<group>";
@@ -88,6 +93,31 @@
 				2DE141FF282AF30800AD741E /* amplience_sdk_ios.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B08C2EDC283FA4080000B1AE /* Main Menu */ = {
+			isa = PBXGroup;
+			children = (
+				B08C2ED5283FA2330000B1AE /* MenuTableViewController.swift */,
+				B08C2ED8283FA36F0000B1AE /* MenuTableViewCell.swift */,
+			);
+			path = "Main Menu";
+			sourceTree = "<group>";
+		};
+		B08C2EDD283FA4150000B1AE /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				B08C2EDA283FA4040000B1AE /* BannerViewController.swift */,
+			);
+			path = Examples;
+			sourceTree = "<group>";
+		};
+		B08C2EE2283FBDAB0000B1AE /* Example custom model */ = {
+			isa = PBXGroup;
+			children = (
+				B08C2EE3283FBDB60000B1AE /* Banner.swift */,
+			);
+			path = "Example custom model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,10 +207,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B08C2EDB283FA4040000B1AE /* BannerViewController.swift in Sources */,
 				B08C2ED6283FA2330000B1AE /* MenuTableViewController.swift in Sources */,
 				2DE141D3282AF2F000AD741E /* AppDelegate.swift in Sources */,
 				B08C2ED9283FA36F0000B1AE /* MenuTableViewCell.swift in Sources */,
 				2DE141D5282AF2F000AD741E /* SceneDelegate.swift in Sources */,
+				B08C2EE4283FBDB60000B1AE /* Banner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
