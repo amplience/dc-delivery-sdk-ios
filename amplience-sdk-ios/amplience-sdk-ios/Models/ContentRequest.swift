@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ContentRequest: Codable {
+public struct ContentRequest: Codable {
     let requests: Array<Request>
     var parameters = Parameters()
 }

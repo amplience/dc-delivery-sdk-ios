@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Request: Codable {
+public struct Request: Codable {
     var id: String?
     var key: String?
 }

@@ -23,7 +23,7 @@ public struct AnyCodable {
 
 public extension AnyCodable {
 
-    public func assertValue<T>(_ type: T.Type) throws -> T {
+    func assertValue<T>(_ type: T.Type) throws -> T {
 
         switch type {
         case is NSNull.Type where self.value == nil:
@@ -40,7 +40,7 @@ public extension AnyCodable {
 
 public extension AnyCodable {
 
-    public enum Error: Swift.Error {
+    enum Error: Swift.Error {
         case typeMismatch(Any.Type)
     }
 }
@@ -217,7 +217,7 @@ public extension KeyedDecodingContainerProtocol {
      - `"value"` or `.some("value")`: represents a value.
      - `.some(nil)`: represents `null`.
      */
-    public func decodeIfPresentEvaluatingNil<T>(_ type: T.Type, forKey key: Self.Key) throws -> T?? where T: Decodable {
+    func decodeIfPresentEvaluatingNil<T>(_ type: T.Type, forKey key: Self.Key) throws -> T?? where T: Decodable {
 
         switch try? self.decodeNil(forKey: key) {
         case .some(true):
@@ -233,7 +233,7 @@ public extension KeyedDecodingContainerProtocol {
 
 public extension KeyedEncodingContainerProtocol {
 
-    public mutating func encodeIfPresent(_ value: AnyCodable?, forKey key: Self.Key) throws {
+    mutating func encodeIfPresent(_ value: AnyCodable?, forKey key: Self.Key) throws {
 
         guard let someValue = value, someValue.value != nil else {
             return

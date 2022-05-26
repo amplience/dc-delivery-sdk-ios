@@ -46,7 +46,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2DE141F0282AF30800AD741E /* amplience_sdk_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = amplience_sdk_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DE141F0282AF30800AD741E /* Amplience.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Amplience.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DE141F3282AF30800AD741E /* amplience_sdk_ios.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = amplience_sdk_ios.h; sourceTree = "<group>"; };
 		B0262B6C2834DFA200510C8F /* AmplienceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmplienceManager.swift; sourceTree = "<group>"; };
 		B0262B6F2834E6DD00510C8F /* ContentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentResponse.swift; sourceTree = "<group>"; };
@@ -107,7 +107,7 @@
 		2DE141F1282AF30800AD741E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2DE141F0282AF30800AD741E /* amplience_sdk_ios.framework */,
+				2DE141F0282AF30800AD741E /* Amplience.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -201,9 +201,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		2DE141EF282AF30800AD741E /* amplience-sdk-ios */ = {
+		2DE141EF282AF30800AD741E /* Amplience */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2DE141F7282AF30800AD741E /* Build configuration list for PBXNativeTarget "amplience-sdk-ios" */;
+			buildConfigurationList = 2DE141F7282AF30800AD741E /* Build configuration list for PBXNativeTarget "Amplience" */;
 			buildPhases = (
 				2DE141EB282AF30800AD741E /* Headers */,
 				2DE141EC282AF30800AD741E /* Sources */,
@@ -214,9 +214,9 @@
 			);
 			dependencies = (
 			);
-			name = "amplience-sdk-ios";
+			name = Amplience;
 			productName = "amplience-sdk-ios";
-			productReference = 2DE141F0282AF30800AD741E /* amplience_sdk_ios.framework */;
+			productReference = 2DE141F0282AF30800AD741E /* Amplience.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -247,7 +247,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2DE141EF282AF30800AD741E /* amplience-sdk-ios */,
+				2DE141EF282AF30800AD741E /* Amplience */,
 			);
 		};
 /* End PBXProject section */
@@ -449,8 +449,8 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nebula.amplience-sdk-ios";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amplience;
+				PRODUCT_NAME = Amplience;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -480,8 +480,8 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nebula.amplience-sdk-ios";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amplience;
+				PRODUCT_NAME = Amplience;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -501,7 +501,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2DE141F7282AF30800AD741E /* Build configuration list for PBXNativeTarget "amplience-sdk-ios" */ = {
+		2DE141F7282AF30800AD741E /* Build configuration list for PBXNativeTarget "Amplience" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2DE141F8282AF30800AD741E /* Debug */,

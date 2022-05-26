@@ -7,16 +7,16 @@
 
 import Foundation
 
-typealias ContentResponseCompletion = (ContentResponse?, Error?) -> ()
-typealias MultipleContentResponseCompletion = ([ContentResponse]?, Error?) -> ()
-typealias PagedResponseCompletion = (PagedResponse?, Error?) -> ()
+public typealias ContentResponseCompletion = (ContentResponse?, Error?) -> ()
+public typealias MultipleContentResponseCompletion = ([ContentResponse]?, Error?) -> ()
+public typealias PagedResponseCompletion = (PagedResponse?, Error?) -> ()
 
-class AmplienceManager {
-    static let shared = AmplienceManager()
+public class AmplienceManager {
+    public static let shared = AmplienceManager()
     
     private init() {}
     
-    var hub: String?
+    public var hub: String?
         
     /**
      * [isFresh] - switch between fresh or cached environments
@@ -24,9 +24,9 @@ class AmplienceManager {
      *
      *
      **/
-    var isFresh = false
+    public var isFresh = false
     
-    var freshApiKey: String?
+    public var freshApiKey: String?
     
     private var generateBaseUrl: String {
         get {
@@ -50,7 +50,7 @@ class AmplienceManager {
         }
     }
     
-    func getContentById(id: String, completion: @escaping ContentResponseCompletion) {
+    public func getContentById(id: String, completion: @escaping ContentResponseCompletion) {
         let params: [String: Any] = [
             "depth": "all",
             "format": "inlined"
@@ -62,7 +62,7 @@ class AmplienceManager {
         }
     }
     
-    func getContentByKey(key: String, completion: @escaping ContentResponseCompletion) {
+    public func getContentByKey(key: String, completion: @escaping ContentResponseCompletion) {
         let params: [String: Any] = [
             "depth": "all",
             "format": "inlined"
@@ -74,14 +74,14 @@ class AmplienceManager {
         }
     }
     
-    func getMultipleContent(contentRequest: ContentRequest, completion: @escaping MultipleContentResponseCompletion) {
+    public func getMultipleContent(contentRequest: ContentRequest, completion: @escaping MultipleContentResponseCompletion) {
         let url = currentBaseUrl + "content/fetch"
         BaseRequest().POST(url: url, requestObject: contentRequest, responseType: [ContentResponse].self) { result, error in
             completion(result, error)
         }
     }
     
-    func filterContent(filterRequest: FilterRequest, completion: @escaping PagedResponseCompletion) {
+    public func filterContent(filterRequest: FilterRequest, completion: @escaping PagedResponseCompletion) {
         let url = currentBaseUrl + "content/filter"
         BaseRequest().POST(url: url, requestObject: filterRequest, responseType: PagedResponse.self) { result, error in
             completion(result, error)

@@ -12,8 +12,8 @@ import Foundation
  * @property format - can be inlined or linked
  * @property locale
  */
-struct Parameters: Codable {
-    let depth: String = "all"
-    let format: String = "inlined"
+public struct Parameters: Codable {
+    var depth: String = "all"
+    var format: String = "inlined"
     var locale: String?
 }

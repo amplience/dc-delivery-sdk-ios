@@ -6,12 +6,13 @@
 //
 
 import UIKit
-
+import Amplience
 
 class MenuTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(AmplienceManager.shared.freshApiKey)
     }
 
     // MARK: - Table view data source
@@ -25,9 +26,10 @@ class MenuTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell", for: indexPath) as! MenuTableViewCell
 
         // Configure the cell...
+        cell.mainLabel.text = "Banner example"
 
         return cell
     }

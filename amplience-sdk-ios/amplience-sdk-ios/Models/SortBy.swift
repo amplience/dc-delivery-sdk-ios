@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Order: String, Codable {
+public enum Order: String, Codable {
     case ASC = "ASC"
     case DESC = "DESC"
 }
@@ -17,7 +17,7 @@ enum Order: String, Codable {
  * trait:sortable section of each schema that contains the filterable property.
  * @property order - Optional, can be [Order.ASC] (ascending) or [Order.DESC] (descending). ASC by default
  */
-struct SortBy: Codable {
+public struct SortBy: Codable {
     let key: String
     var order: Order = Order.ASC
 }

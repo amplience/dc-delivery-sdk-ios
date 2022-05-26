@@ -16,7 +16,7 @@ import Foundation
  * @property parameters - Override depth, format and locale
  * @property page - Pagination
  */
-struct FilterRequest: Codable {
+public struct FilterRequest: Codable {
     let filterBy: Array<FilterBy>
     let sortBy: SortBy?
     let page: Page?

@@ -13,7 +13,7 @@ import Foundation
  * @property path - The JSON pointer format path to the filterable property to use as a filter.
  * @property value - The value to match against
  */
-struct FilterBy: Codable {
+public struct FilterBy: Codable {
     let path: String
     let value: String
 }

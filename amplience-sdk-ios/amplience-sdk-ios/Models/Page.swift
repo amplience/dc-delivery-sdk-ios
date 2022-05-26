@@ -17,7 +17,7 @@ import Foundation
  * @property cursor (optional) - The starting point for the next request. Returned in
  * the nextCursor property of the response if there are further results.
  */
-struct Page: Codable {
+public struct Page: Codable {
     let size: Int
     let cursor: String?
 }

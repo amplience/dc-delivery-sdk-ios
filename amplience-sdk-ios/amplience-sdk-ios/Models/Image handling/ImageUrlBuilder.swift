@@ -325,7 +325,7 @@ class ImageUrlBuilder {
         }
         
         if (dpi != nil) {
-            addQuery(query: "dpi=\(dpi)")
+            addQuery(query: "dpi=\(dpi!)")
             if (dpiFilter != nil) {
                 addQuery(query: "dpiFilter=\(dpiFilter!)")
             }

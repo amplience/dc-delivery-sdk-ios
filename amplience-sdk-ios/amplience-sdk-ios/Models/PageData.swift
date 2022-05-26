@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PageData: Codable {
+public struct PageData: Codable {
     let responseCount: Int
     let nextCursor: String?
 }
