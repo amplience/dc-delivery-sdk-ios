@@ -48,6 +48,7 @@ class ImageUrlBuilder {
     private var hue: Int? = nil
     private var saturation: Int? = nil
     private var brightness: Int? = nil
+    private var layers: Array<Layer> = Array()
     
     func setWidth(width: Int) { self.width = width }
     func setHeight(height: Int) { self.height = height }
@@ -187,6 +188,60 @@ class ImageUrlBuilder {
         self.brightness = brightness
     }
     
+    func addImageLayer(
+        src: String,
+        width: Int? = nil,
+        height: Int? = nil,
+        topPx: Int? = nil,
+        topPercent: Int? = nil,
+        leftPx: Int? = nil,
+        leftPercent: Int? = nil,
+        bottomPx: Int? = nil,
+        bottomPercent: Int? = nil,
+        rightPx: Int? = nil,
+        rightPercent: Int? = nil,
+        anchor: Anchor? = nil,
+        opacity: Int? = nil
+    ) {
+        let il = ImageLayer(src: src)
+        il.width = width
+        il.height = height
+        il.topPx = topPx
+        il.topPercent = topPercent
+        il.leftPx = leftPx
+        il.leftPercent = leftPercent
+        il.bottomPx = bottomPx
+        il.bottomPercent = bottomPercent
+        il.rightPx = rightPx
+        il.rightPercent = rightPercent
+        il.anchor = anchor
+        il.opacity = opacity
+        layers.append(il)
+    }
+
+    func addTextLayer(
+        text: String,
+        fontSize: Int? = nil, // defaults to 10
+        fontFamily: String? = nil, // If you don't specify a font family, or specify a font that is not installed on your account, then it will default to Helevetica.
+        fontStyle: FontStyle? = nil,
+        fontWeight: Int? = nil, // Valid values are from 100 to 900 in multiples of 100.
+        fontStretch: FontStretch? = nil,
+        textColor: TextColor? = nil,
+        textDecoration: Decoration? = nil,
+        textAlign: String? = nil
+    ) {
+        let tl = TextLayer(text: text)
+        tl.fontSize = fontSize
+        tl.fontFamily = fontFamily
+        tl.fontStyle = fontStyle
+        tl.fontWeight = fontWeight
+        tl.fontStretch = fontStretch
+        tl.textColor = textColor
+        tl.textDecoration = textDecoration
+        tl.textAlign = textAlign
+        layers.append(tl)
+    }
+    
     
     func build() -> String {
         var builder = String()
@@ -204,28 +259,28 @@ class ImageUrlBuilder {
         }
         
         if (width != nil) {
-            addQuery(query: "w=\(width)")
+            addQuery(query: "w=\(width!)")
         }
         if (height != nil) {
-            addQuery(query: "h=\(height)")
+            addQuery(query: "h=\(height!)")
         }
         if (maxWidth != nil) {
-            addQuery(query: "maxW=\(maxWidth)")
+            addQuery(query: "maxW=\(maxWidth!)")
         }
         if (maxHeight != nil) {
-            addQuery(query: "maxH=\(maxHeight)")
+            addQuery(query: "maxH=\(maxHeight!)")
         }
         if (scaleMode != nil) {
-            addQuery(query: "sm=\(scaleMode)")
+            addQuery(query: "sm=\(scaleMode!)")
         }
         if (scaleFit != nil) {
-            addQuery(query: "scalefit=\(scaleFit)")
+            addQuery(query: "scalefit=\(scaleFit!)")
         }
         if (resizeAlgorithm != nil) {
-            addQuery(query: "filter=\(resizeAlgorithm)")
+            addQuery(query: "filter=\(resizeAlgorithm!)")
         }
         if (upscale != nil)  {
-            addQuery(query: "upscale=\(upscale)")
+            addQuery(query: "upscale=\(upscale!)")
         }
         if (crop != nil){
             addQuery(query: "crop=\(crop!.x),\(crop!.y),\(crop!.w),\(crop!.h)")
@@ -247,9 +302,9 @@ class ImageUrlBuilder {
         
         if (rotateDegrees != nil) {
             if (preRotate == true) {
-                addQuery(query: "protate=\(rotateDegrees)")
+                addQuery(query: "protate=\(rotateDegrees!)")
             } else {
-                addQuery(query: "rotate=\(rotateDegrees)")
+                addQuery(query: "rotate=\(rotateDegrees!)")
             }
             if (rgb != nil) {
                 builder.append(",rgb(\(rgb!.r),\(rgb!.g),\(rgb!.b)")
@@ -263,7 +318,7 @@ class ImageUrlBuilder {
             addQuery(query: "flipv=true")
         }
         if (format != nil) {
-            addQuery(query: "fmt=\(format)")
+            addQuery(query: "fmt=\(format!)")
         }
         if (formatQuality != nil) {
             addQuery(query: formatQuality!.toString())
@@ -272,7 +327,7 @@ class ImageUrlBuilder {
         if (dpi != nil) {
             addQuery(query: "dpi=\(dpi)")
             if (dpiFilter != nil) {
-                addQuery(query: "dpiFilter=\(dpiFilter)")
+                addQuery(query: "dpiFilter=\(dpiFilter!)")
             }
         }
         
@@ -284,14 +339,14 @@ class ImageUrlBuilder {
             addQuery(query: "fmt.jpeg.chroma=1,1,1")
         }
         if (colourSpace != nil) {
-            addQuery(query: "cs=\(colourSpace)")
+            addQuery(query: "cs=\(colourSpace!)")
         }
         if (unsharp != nil) {
             addQuery(query: "unsharp=\(unsharp!.radius),\(unsharp!.sigma),\(unsharp!.amount),\(unsharp!.threshold)")
         }
         
         if (compositeMode != nil) {
-            addQuery(query: "cm=\(compositeMode)")
+            addQuery(query: "cm=\(compositeMode!)")
         }
         
         if (backgroundRgb != nil) {
@@ -302,7 +357,7 @@ class ImageUrlBuilder {
         if (indexed) {
             addQuery(query: "fmt.png.indexed=true")
             if (paletteSize != nil) {
-                addQuery(query: "fmt.png.palettesize=\(paletteSize)")
+                addQuery(query: "fmt.png.palettesize=\(paletteSize!)")
             }
         }
         
@@ -315,17 +370,23 @@ class ImageUrlBuilder {
         }
         
         if (reduceNoise != nil) {
-            addQuery(query: "noiser=\(reduceNoise)")
+            addQuery(query: "noiser=\(reduceNoise!)")
         }
         
         if (gamma != nil) {
-            addQuery(query: "gamma=\(gamma)")
+            addQuery(query: "gamma=\(gamma!)")
         }
         
-        if (hue != nil) { addQuery(query: "hue=\(hue)")}
-        if (saturation != nil) { addQuery(query: "sat=\(saturation)") }
+        if (hue != nil) { addQuery(query: "hue=\(hue!)")}
+        
+        if (saturation != nil) { addQuery(query: "sat=\(saturation!)") }
+        
         if (brightness != nil) {
-            addQuery(query: "bri=\(brightness)")
+            addQuery(query: "bri=\(brightness!)")
+        }
+
+        for (i, item) in layers.enumerated() {
+            addQuery(query: "layer\(i + 1)=\(item.toQuery())")
         }
         
         return builder

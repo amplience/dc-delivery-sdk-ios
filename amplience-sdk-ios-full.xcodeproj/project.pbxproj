@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		2DE141D3282AF2F000AD741E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE141D2282AF2F000AD741E /* AppDelegate.swift */; };
 		2DE141D5282AF2F000AD741E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE141D4282AF2F000AD741E /* SceneDelegate.swift */; };
-		2DE141D7282AF2F000AD741E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE141D6282AF2F000AD741E /* ViewController.swift */; };
 		2DE141DA282AF2F000AD741E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DE141D8282AF2F000AD741E /* Main.storyboard */; };
 		2DE141DC282AF2F100AD741E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DE141DB282AF2F100AD741E /* Assets.xcassets */; };
 		2DE141DF282AF2F100AD741E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DE141DD282AF2F100AD741E /* LaunchScreen.storyboard */; };
+		B08C2ED6283FA2330000B1AE /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08C2ED5283FA2330000B1AE /* MenuTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,12 +29,12 @@
 		2DE141CF282AF2F000AD741E /* amplience-sdk-ios-full.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "amplience-sdk-ios-full.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DE141D2282AF2F000AD741E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DE141D4282AF2F000AD741E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2DE141D6282AF2F000AD741E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2DE141D9282AF2F000AD741E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2DE141DB282AF2F100AD741E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2DE141DE282AF2F100AD741E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2DE141E0282AF2F100AD741E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DE141FA282AF30800AD741E /* amplience-sdk-ios.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "amplience-sdk-ios.xcodeproj"; path = "amplience-sdk-ios/amplience-sdk-ios.xcodeproj"; sourceTree = "<group>"; };
+		B08C2ED5283FA2330000B1AE /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +70,7 @@
 			children = (
 				2DE141D2282AF2F000AD741E /* AppDelegate.swift */,
 				2DE141D4282AF2F000AD741E /* SceneDelegate.swift */,
-				2DE141D6282AF2F000AD741E /* ViewController.swift */,
+				B08C2ED5283FA2330000B1AE /* MenuTableViewController.swift */,
 				2DE141D8282AF2F000AD741E /* Main.storyboard */,
 				2DE141DB282AF2F100AD741E /* Assets.xcassets */,
 				2DE141DD282AF2F100AD741E /* LaunchScreen.storyboard */,
@@ -174,7 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DE141D7282AF2F000AD741E /* ViewController.swift in Sources */,
+				B08C2ED6283FA2330000B1AE /* MenuTableViewController.swift in Sources */,
 				2DE141D3282AF2F000AD741E /* AppDelegate.swift in Sources */,
 				2DE141D5282AF2F000AD741E /* SceneDelegate.swift in Sources */,
 			);

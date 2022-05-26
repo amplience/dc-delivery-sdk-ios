@@ -14,6 +14,6 @@ struct Image{
     let defaultHost: String
 
     func getUrl() -> String {
-        return ""//AmplienceManager.getInstance().getImageUrl(this)
+        return ""//TODO: AmplienceManager.getInstance().getImageUrl(this)
     }
 }

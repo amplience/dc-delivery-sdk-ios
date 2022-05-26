@@ -1,0 +1,77 @@
+//
+//  Textlayer.swift
+//  amplience-sdk-ios
+//
+//  Created by Dylan McKee on 26/05/2022.
+//
+
+import Foundation
+
+class TextLayer: Layer {
+
+    var text: String
+    var fontSize: Int? = nil // defaults to 10 if not specifeid
+    var fontFamily: String? = nil // If you don't specify a font family or specify a font that is not installed on your account then it will default to Helevetica.
+    var fontStyle: FontStyle? = nil
+    var fontWeight: Int? = nil // varid varues are from 100 to 900 in multiples of 100.
+    var fontStretch: FontStretch? = nil
+    var textColor: TextColor? = nil
+    var textDecoration: Decoration? = nil
+    var textAlign: String? = nil
+    
+    init(text: String) {
+        self.text = text
+    }
+    
+    func toQuery() -> String {
+        var builder = "["
+        var firstQuery = true
+
+        func addQuery(query: String) {
+            if (firstQuery) {
+                builder.append("?")
+                firstQuery = false
+            } else {
+                builder.append("&")
+            }
+            builder.append(query)
+        }
+
+        if fontSize != nil {
+            addQuery(query: "fontSize=\(fontSize!)")
+        }
+        
+        if fontFamily != nil {
+            addQuery(query: "fontFamily=\(fontFamily!)")
+        }
+        
+        if fontStyle != nil {
+            addQuery(query: "fontStyle=\(fontStyle!)")
+        }
+        
+        if fontWeight != nil {
+            addQuery(query: "fontWeight=\(fontWeight!)")
+        }
+        
+        if fontStretch != nil {
+            addQuery(query: "fontStretch=\(fontStretch!)")
+        }
+        
+        if textColor != nil {
+            addQuery(query: "textColor=\(textColor!)")
+        }
+        
+        if textDecoration != nil {
+            addQuery(query: "textDecoration=\(textDecoration!)")
+        }
+        
+        if textAlign != nil {
+            addQuery(query: "textAlign=\(textAlign!)")
+        }
+        
+        builder.append("]")
+        return builder
+    }
+
+
+}

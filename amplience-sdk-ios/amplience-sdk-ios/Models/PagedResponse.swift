@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PagedResponse {
+struct PagedResponse: Codable {
     let responses: Array<ContentResponse>
     let page: PageData
 }

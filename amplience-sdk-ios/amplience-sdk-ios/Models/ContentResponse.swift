@@ -18,6 +18,6 @@ private class DictionaryDecoder {
 }
 
 
-struct ContentResponse {
-    let content: Dictionary<String, Any>
+struct ContentResponse: Codable {
+    let content: Dictionary<String, AnyCodable>
 }
