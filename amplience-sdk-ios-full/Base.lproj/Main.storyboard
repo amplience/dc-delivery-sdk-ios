@@ -16,13 +16,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="fKT-bl-96A">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="menuCell" id="fKT-bl-96A" customClass="MenuTableViewCell" customModule="amplience_sdk_ios_full" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fKT-bl-96A" id="2FF-XW-JEJ">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zm1-fN-TS2">
+                                            <rect key="frame" x="20" y="11" width="380" height="22"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Zm1-fN-TS2" firstAttribute="top" secondItem="2FF-XW-JEJ" secondAttribute="top" constant="11" id="QgJ-TE-hm8"/>
+                                        <constraint firstItem="Zm1-fN-TS2" firstAttribute="leading" secondItem="2FF-XW-JEJ" secondAttribute="leading" constant="20" symbolic="YES" id="SnR-wp-vqu"/>
+                                        <constraint firstAttribute="bottom" secondItem="Zm1-fN-TS2" secondAttribute="bottom" constant="11.5" id="e4R-bT-iKR"/>
+                                        <constraint firstAttribute="trailing" secondItem="Zm1-fN-TS2" secondAttribute="trailing" constant="14" id="p8K-i5-fQC"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="mainLabel" destination="Zm1-fN-TS2" id="rgz-yK-XcN"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -34,7 +51,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ar-87-ydk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="670" y="115"/>
+            <point key="canvasLocation" x="669.56521739130437" y="114.50892857142857"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cP1-mg-zet">
