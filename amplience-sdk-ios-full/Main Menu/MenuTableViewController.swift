@@ -35,7 +35,13 @@ class MenuTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // Load relevant example...
+        tableView.deselectRow(at: indexPath, animated: true)
+        showBannerVC()
+    }
+    
+    private func showBannerVC() {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "BannerViewController") as! BannerViewController
+        navigationController?.pushViewController(vc, animated: true)
     }
 
 

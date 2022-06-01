@@ -73,7 +73,7 @@
         <!--Banner View Controller-->
         <scene sceneID="DDQ-WA-Ylr">
             <objects>
-                <viewController id="IvB-1d-MGY" customClass="BannerViewController" customModule="amplience_sdk_ios_full" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BannerViewController" id="IvB-1d-MGY" customClass="BannerViewController" customModule="amplience_sdk_ios_full" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wbW-Xo-68i">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
