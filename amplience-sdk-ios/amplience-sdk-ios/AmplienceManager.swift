@@ -12,21 +12,21 @@ public typealias MultipleContentResponseCompletion = ([ContentResponse]?, Error?
 public typealias PagedResponseCompletion = (PagedResponse?, Error?) -> ()
 
 public class AmplienceManager {
-    
+
     /**
      * [shared]
      * Get the current instance of the [AmplienceManager].
      */
     public static let shared = AmplienceManager()
-    
+
     private init() {}
-    
+
     /**
      * [hub]
      * The current conent hub name.
      */
     public var hub: String?
-        
+
     /**
      * [isFresh] - switch between fresh or cached environments
      * See https://amplience.com/docs/development/freshapi/fresh-api.html for details
@@ -38,28 +38,28 @@ public class AmplienceManager {
             return self.isFresh
         }
         set {
-            if freshApiKey == nil {
+            if newValue == true && freshApiKey == nil {
                 fatalError("Please set freshApiKey before enabligh Fresh environment mode!")
             }
-            
+
             self.isFresh = newValue
         }
     }
-    
+
     public var freshApiKey: String?
-    
+
     private var generateBaseUrl: String {
         get {
             return "https://\(hub!).cdn.content.amplience.net"
         }
     }
-    
+
     private var generateFreshBaseUrl: String {
         get {
             return "https://\(hub!).fresh.content.amplience.net"
         }
     }
-        
+
     private var currentBaseUrl: String {
         get {
             if isFresh {
@@ -69,7 +69,7 @@ public class AmplienceManager {
             }
         }
     }
-    
+
     /**
      * [getContentById]
      * @param id - the id of the object you want to retrieve
@@ -89,7 +89,7 @@ public class AmplienceManager {
             completion(incidentTypes, error)
         }
     }
-    
+
     /**
      * [getContentByKey]
      * @param key - the key of the object you want to retrieve
@@ -109,7 +109,7 @@ public class AmplienceManager {
             completion(incidentTypes, error)
         }
     }
-    
+
     /**
      * [getMultipleContent]
      * @param requests - ids or keys of content to get
@@ -125,7 +125,7 @@ public class AmplienceManager {
             completion(result, error)
         }
     }
-    
+
     /**
      * [getContentByFilters]
      * @param filters - any number of [FilterBy] key value pairs
@@ -143,7 +143,7 @@ public class AmplienceManager {
             completion(result, error)
         }
     }
-    
+
     /**
      * [getImageUrl] returns a url that can be used with any image loading libraries
      *
@@ -190,5 +190,5 @@ public class AmplienceManager {
         string += builder.build()
         return string
     }
-    
+
 }
