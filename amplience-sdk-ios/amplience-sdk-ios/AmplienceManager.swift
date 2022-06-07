@@ -39,13 +39,13 @@ public class AmplienceManager {
 
     private var generateBaseUrl: String {
         get {
-            return "https://\(hub!).cdn.content.amplience.net"
+            return "https://\(hub!).cdn.content.amplience.net/"
         }
     }
 
     private var generateFreshBaseUrl: String {
         get {
-            return "https://\(hub!).fresh.content.amplience.net"
+            return "https://\(hub!).fresh.content.amplience.net/"
         }
     }
 
