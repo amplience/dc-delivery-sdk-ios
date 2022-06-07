@@ -33,18 +33,7 @@ public class AmplienceManager {
      *
      * @throws RuntimeException if you have not provided a freshApiKey in the [AmplienceManager.initialise] method
      */
-    public var isFresh: Bool {
-        get {
-            return self.isFresh
-        }
-        set {
-            if newValue == true && freshApiKey == nil {
-                fatalError("Please set freshApiKey before enabligh Fresh environment mode!")
-            }
-
-            self.isFresh = newValue
-        }
-    }
+    public var isFresh: Bool = false
 
     public var freshApiKey: String?
 
