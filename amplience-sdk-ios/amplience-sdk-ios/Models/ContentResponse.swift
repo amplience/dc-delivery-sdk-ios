@@ -19,5 +19,5 @@ private class DictionaryDecoder {
 
 
 public struct ContentResponse: Codable {
-    let content: Dictionary<String, AnyCodable>
+    public let content: Dictionary<String, AnyCodable>
 }

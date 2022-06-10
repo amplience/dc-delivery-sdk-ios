@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D5060CB285391B2007E8DF3 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5060CA285391B2007E8DF3 /* ImageLoader.swift */; };
 		2DE141F4282AF30800AD741E /* amplience_sdk_ios.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DE141F3282AF30800AD741E /* amplience_sdk_ios.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B0262B6D2834DFA200510C8F /* AmplienceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0262B6C2834DFA200510C8F /* AmplienceManager.swift */; };
 		B0262B702834E6DD00510C8F /* ContentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0262B6F2834E6DD00510C8F /* ContentResponse.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D5060CA285391B2007E8DF3 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		2DE141F0282AF30800AD741E /* Amplience.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Amplience.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DE141F3282AF30800AD741E /* amplience_sdk_ios.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = amplience_sdk_ios.h; sourceTree = "<group>"; };
 		B0262B6C2834DFA200510C8F /* AmplienceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmplienceManager.swift; sourceTree = "<group>"; };
@@ -98,6 +100,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D5060C9285391A3007E8DF3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2D5060CA285391B2007E8DF3 /* ImageLoader.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		2DE141E6282AF30800AD741E = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +127,7 @@
 		2DE141F2282AF30800AD741E /* amplience-sdk-ios */ = {
 			isa = PBXGroup;
 			children = (
+				2D5060C9285391A3007E8DF3 /* Helpers */,
 				B08C2ECA283F934C0000B1AE /* Network */,
 				B0262BA428353A8F00510C8F /* Media */,
 				B0262B6E2834E6CC00510C8F /* Models */,
@@ -296,6 +307,7 @@
 				B08C2ED4283FA0250000B1AE /* AnyCodable.swift in Sources */,
 				B0262B7C2834E88900510C8F /* FilterRequest.swift in Sources */,
 				B08C2ED0283F95D30000B1AE /* NetworkingError.swift in Sources */,
+				2D5060CB285391B2007E8DF3 /* ImageLoader.swift in Sources */,
 				B0262B822834E8F800510C8F /* PagedResponse.swift in Sources */,
 				B0262B912834ED7300510C8F /* EdgeCrop.swift in Sources */,
 				B0262B742834E7BB00510C8F /* Request.swift in Sources */,

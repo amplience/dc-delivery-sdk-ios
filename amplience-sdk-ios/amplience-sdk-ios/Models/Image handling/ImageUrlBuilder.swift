@@ -50,6 +50,8 @@ public class ImageUrlBuilder {
     private var brightness: Int? = nil
     private var layers: Array<Layer> = Array()
     
+    public init() {}
+    
     func setWidth(width: Int) { self.width = width }
     func setHeight(height: Int) { self.height = height }
     func setMaxWidth(maxWidth: Int) { self.maxWidth = maxWidth }
