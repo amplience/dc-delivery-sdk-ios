@@ -78,7 +78,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s2s-5a-HnU">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s2s-5a-HnU">
                                 <rect key="frame" x="0.0" y="44" width="414" height="207"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="s2s-5a-HnU" secondAttribute="height" multiplier="1:0.5" id="CHz-3G-F1d"/>
@@ -138,6 +138,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="imt-pi-uru" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-220" y="889"/>
+        </scene>
+        <!--Slides View Controller-->
+        <scene sceneID="F4T-rT-nZL">
+            <objects>
+                <viewController storyboardIdentifier="SlidesViewController" id="QAU-Dm-c9U" customClass="SlidesViewController" customModule="amplience_sdk_ios_full" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kct-c5-pCc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="VRX-TX-pQr">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9x5-UL-INW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VRX-TX-pQr" firstAttribute="trailing" secondItem="9x5-UL-INW" secondAttribute="trailing" id="6jt-Y5-KVf"/>
+                            <constraint firstItem="VRX-TX-pQr" firstAttribute="top" secondItem="9x5-UL-INW" secondAttribute="top" id="UHc-Eb-fKy"/>
+                            <constraint firstItem="VRX-TX-pQr" firstAttribute="leading" secondItem="9x5-UL-INW" secondAttribute="leading" id="y8N-7s-CgA"/>
+                            <constraint firstAttribute="bottom" secondItem="VRX-TX-pQr" secondAttribute="bottom" id="yIB-H8-yNA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="VRX-TX-pQr" id="Z6P-Ub-B1U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FdF-j6-Mab" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="669.56521739130437" y="888.61607142857144"/>
         </scene>
     </scenes>
     <resources>
