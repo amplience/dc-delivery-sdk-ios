@@ -41,8 +41,8 @@ class BannerViewController: UIViewController {
     private func loadBanner() {
         AmplienceManager.shared.getContentByKey(key: "example-key") { [weak self] response, error in
             guard let self = self else { return }
-            if let erorr = error {
-                print(error?.localizedDescription)
+            if error != nil {
+                print(error!.localizedDescription)
             } else if let response = response {
                 let dict = response.content
                 self.banner = Banner(dict: dict)
