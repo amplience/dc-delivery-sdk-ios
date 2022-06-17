@@ -10,7 +10,7 @@ import Amplience
 
 class MenuTableViewController: UITableViewController {
     
-    private let titles = ["Banner example", "Slides example"]
+    private let titles = ["Banner example", "Slides example", "Multi content example"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +41,7 @@ class MenuTableViewController: UITableViewController {
         switch indexPath.row {
             case 0: showBannerVC()
             case 1: showSlidesVC()
+            case 2: showMultiContentVC()
             default: break
         }
         
@@ -53,6 +54,11 @@ class MenuTableViewController: UITableViewController {
     
     private func showSlidesVC() {
         let vc = storyboard!.instantiateViewController(withIdentifier: "SlidesViewController")
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    private func showMultiContentVC() {
+        let vc = storyboard!.instantiateViewController(withIdentifier: "MultiContentViewController")
         navigationController?.pushViewController(vc, animated: true)
     }
 
