@@ -44,6 +44,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Button">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="actionButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="JGo-lk-5J4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qVb-6H-WuI"/>
@@ -76,6 +79,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="actionButton" destination="nyo-7z-JJq" id="uVA-4X-0WS"/>
                 <outlet property="bannerImageView" destination="CeS-ar-Et5" id="iia-rr-kJ4"/>
                 <outlet property="bottomTitleLabel" destination="zcp-G4-Dt0" id="zec-F0-dfY"/>
                 <outlet property="topTitleLabel" destination="zdO-Zk-C0R" id="798-UX-e2v"/>

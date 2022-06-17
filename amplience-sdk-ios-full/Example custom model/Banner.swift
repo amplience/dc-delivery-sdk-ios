@@ -26,4 +26,12 @@ struct Banner: Codable {
         callToActionUrl = dict[CodingKeys.callToActionUrl.rawValue]!.value as! String
         background = AmplienceImage(dict: dict[CodingKeys.background.rawValue]!.value as! [String: Any])
     }
+    
+    init(dict: [String: Any]) {
+        headline = dict[CodingKeys.headline.rawValue] as! String
+        strapline = dict[CodingKeys.strapline.rawValue] as! String
+        callToActionText = dict[CodingKeys.callToActionText.rawValue] as! String
+        callToActionUrl = dict[CodingKeys.callToActionUrl.rawValue] as! String
+        background = AmplienceImage(dict: dict[CodingKeys.background.rawValue] as! [String: Any])
+    }
 }
