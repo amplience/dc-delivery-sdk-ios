@@ -14,6 +14,7 @@ class BannerViewController: UIViewController {
     @IBOutlet private weak var bottomLabel: UILabel!
     @IBOutlet private weak var buyButton: UIButton!
     @IBOutlet private weak var bannerImageView: UIImageView!
+    @IBOutlet private weak var altTextLabel: UILabel!
     
     private var banner: Banner? {
         didSet {
@@ -32,7 +33,7 @@ class BannerViewController: UIViewController {
     }
     
     @IBAction func buyButtonPresse(_ sender: Any) {
-        if let urlString = banner?.callToActionUrl, let url = URL(string: urlString) {
+        if let urlString = banner?.link?.url ?? banner?.callToActionUrl, let url = URL(string: urlString) {
             UIApplication.shared.open(url)
         }
     }
@@ -61,8 +62,9 @@ class BannerViewController: UIViewController {
        
         topLabel.text = banner.headline
         bottomLabel.text = banner.strapline
-        buyButton.setTitle(banner.callToActionText, for: .normal)
-        if let bg = banner.background {
+        buyButton.setTitle(banner.link?.title ?? banner.callToActionText, for: .normal)
+        altTextLabel.text = banner.background?.alt ?? ""
+        if let bg = banner.background?.image {
             let url = AmplienceManager.shared.getImageUrl(image: bg, builder: ImageUrlBuilder())
             ImageLoader.shared.loadImage(urlString: url, completion: { [weak self] image in
                 guard let self = self else { return }

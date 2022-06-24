@@ -15,6 +15,7 @@ class MultiContentViewController: UIViewController {
     private var model: MultiContent = MultiContent()
     private let slidesCellID = "SlideTableViewCell"
     private let carouselCellID = "SlidesCarouselTableViewCell"
+    private let videoCellID = "VideoTableViewCell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +36,7 @@ class MultiContentViewController: UIViewController {
                     } else if let text = example["text"] as? String {
                         self.model.text = text
                     } else if let video = example["video"] as? [String: Any] {
-                    
+                        self.model.video = AmplienceVideo(dict: video)
                     } else {
                         self.model.banner = Banner(dict: example)
                     }
@@ -50,6 +51,7 @@ class MultiContentViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(UINib(nibName: slidesCellID, bundle: nil), forCellReuseIdentifier: slidesCellID)
         tableView.register(UINib(nibName: carouselCellID, bundle: nil), forCellReuseIdentifier: carouselCellID)
+        tableView.register(UINib(nibName: videoCellID, bundle: nil), forCellReuseIdentifier: videoCellID)
     }
     
 
@@ -82,6 +84,12 @@ extension MultiContentViewController: UITableViewDataSource {
             cell.configure(with: model.slides)
             
             return cell
+        } else if indexPath.row == 2, let video = model.video {
+            let cell = tableView.dequeueReusableCell(withIdentifier: videoCellID, for: indexPath) as! VideoTableViewCell
+            cell.configure(with: video)
+            cell.delegate = self
+            
+            return cell
         }
         
         let cell = UITableViewCell()
@@ -93,6 +101,12 @@ extension MultiContentViewController: UITableViewDataSource {
 
 extension MultiContentViewController: SlideTableViewCellDelegate {
     func didPressAction(with url: URL) {
+        UIApplication.shared.open(url)
+    }
+}
+
+extension MultiContentViewController: VideoTableViewCellDelegate {
+    func playVideo(_ url: URL) {
         UIApplication.shared.open(url)
     }
 }

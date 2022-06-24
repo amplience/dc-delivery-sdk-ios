@@ -110,6 +110,12 @@
                                     <action selector="buyButtonPresse:" destination="IvB-1d-MGY" eventType="touchUpInside" id="cOP-zh-REZ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9c-lQ-J0F">
+                                <rect key="frame" x="10" y="108" width="404" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MHo-GE-AQ3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -119,16 +125,20 @@
                             <constraint firstItem="BeW-yI-Ioe" firstAttribute="top" secondItem="s2s-5a-HnU" secondAttribute="top" constant="10" id="Cbq-Xf-48k"/>
                             <constraint firstItem="s2s-5a-HnU" firstAttribute="top" secondItem="MHo-GE-AQ3" secondAttribute="top" id="Csc-2e-6Yb"/>
                             <constraint firstItem="MHo-GE-AQ3" firstAttribute="trailing" secondItem="s2s-5a-HnU" secondAttribute="trailing" id="EEg-8c-XIE"/>
+                            <constraint firstItem="z9c-lQ-J0F" firstAttribute="top" secondItem="uyN-Oj-ocv" secondAttribute="bottom" id="G8o-NH-fW9"/>
                             <constraint firstItem="uyN-Oj-ocv" firstAttribute="top" secondItem="BeW-yI-Ioe" secondAttribute="bottom" id="Gqk-3d-dhP"/>
                             <constraint firstItem="x4K-VM-f5v" firstAttribute="bottom" secondItem="s2s-5a-HnU" secondAttribute="bottom" constant="-20" id="Jb5-Gh-tI9"/>
                             <constraint firstItem="x4K-VM-f5v" firstAttribute="trailing" secondItem="s2s-5a-HnU" secondAttribute="trailing" constant="-20" id="Ldw-Bp-p32"/>
                             <constraint firstItem="BeW-yI-Ioe" firstAttribute="leading" secondItem="s2s-5a-HnU" secondAttribute="leading" constant="10" id="Rzo-N9-BwO"/>
+                            <constraint firstItem="z9c-lQ-J0F" firstAttribute="trailing" secondItem="uyN-Oj-ocv" secondAttribute="trailing" id="Vhy-9s-egD"/>
+                            <constraint firstItem="z9c-lQ-J0F" firstAttribute="leading" secondItem="uyN-Oj-ocv" secondAttribute="leading" id="Zbb-0V-b1m"/>
                             <constraint firstItem="x4K-VM-f5v" firstAttribute="top" relation="greaterThanOrEqual" secondItem="uyN-Oj-ocv" secondAttribute="bottom" constant="5" id="n0T-Iy-VLB"/>
                             <constraint firstItem="uyN-Oj-ocv" firstAttribute="leading" secondItem="BeW-yI-Ioe" secondAttribute="leading" id="uHV-6L-9kz"/>
                             <constraint firstItem="s2s-5a-HnU" firstAttribute="leading" secondItem="MHo-GE-AQ3" secondAttribute="leading" id="vyg-Gz-eGz"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="altTextLabel" destination="z9c-lQ-J0F" id="IRu-9Z-NlC"/>
                         <outlet property="bannerImageView" destination="s2s-5a-HnU" id="CFQ-rz-AtB"/>
                         <outlet property="bottomLabel" destination="uyN-Oj-ocv" id="dMk-ZN-oGH"/>
                         <outlet property="buyButton" destination="x4K-VM-f5v" id="DfV-HX-Q0n"/>

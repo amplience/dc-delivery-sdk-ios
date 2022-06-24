@@ -14,6 +14,8 @@
 		2D6FC18F285A8212004C861C /* ImageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6FC18E285A8212004C861C /* ImageItem.swift */; };
 		2D799F4A285CA62100EA9932 /* SlideCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D799F48285CA62100EA9932 /* SlideCollectionViewCell.swift */; };
 		2D799F4B285CA62100EA9932 /* SlideCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D799F49285CA62100EA9932 /* SlideCollectionViewCell.xib */; };
+		2D924053286638F900AFBAF4 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D924051286638F900AFBAF4 /* VideoTableViewCell.swift */; };
+		2D924054286638F900AFBAF4 /* VideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D924052286638F900AFBAF4 /* VideoTableViewCell.xib */; };
 		2DE141D3282AF2F000AD741E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE141D2282AF2F000AD741E /* AppDelegate.swift */; };
 		2DE141D5282AF2F000AD741E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE141D4282AF2F000AD741E /* SceneDelegate.swift */; };
 		2DE141DA282AF2F000AD741E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DE141D8282AF2F000AD741E /* Main.storyboard */; };
@@ -54,6 +56,8 @@
 		2D6FC18E285A8212004C861C /* ImageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageItem.swift; sourceTree = "<group>"; };
 		2D799F48285CA62100EA9932 /* SlideCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideCollectionViewCell.swift; sourceTree = "<group>"; };
 		2D799F49285CA62100EA9932 /* SlideCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlideCollectionViewCell.xib; sourceTree = "<group>"; };
+		2D924051286638F900AFBAF4 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
+		2D924052286638F900AFBAF4 /* VideoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoTableViewCell.xib; sourceTree = "<group>"; };
 		2DE141CF282AF2F000AD741E /* amplience-sdk-ios-full.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "amplience-sdk-ios-full.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DE141D2282AF2F000AD741E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DE141D4282AF2F000AD741E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,10 +99,20 @@
 		2D799F47285CA60A00EA9932 /* SlideCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				2D92404C2866374800AFBAF4 /* VideoTableViewCell */,
 				2D799F48285CA62100EA9932 /* SlideCollectionViewCell.swift */,
 				2D799F49285CA62100EA9932 /* SlideCollectionViewCell.xib */,
 			);
 			path = SlideCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		2D92404C2866374800AFBAF4 /* VideoTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2D924051286638F900AFBAF4 /* VideoTableViewCell.swift */,
+				2D924052286638F900AFBAF4 /* VideoTableViewCell.xib */,
+			);
+			path = VideoTableViewCell;
 			sourceTree = "<group>";
 		};
 		2DE141C6282AF2F000AD741E = {
@@ -259,6 +273,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D924054286638F900AFBAF4 /* VideoTableViewCell.xib in Resources */,
 				2D799F4B285CA62100EA9932 /* SlideCollectionViewCell.xib in Resources */,
 				2DE141DF282AF2F100AD741E /* LaunchScreen.storyboard in Resources */,
 				2DE141DC282AF2F100AD741E /* Assets.xcassets in Resources */,
@@ -289,6 +304,7 @@
 				2DE2B650285C90780076002D /* MultiContentViewController.swift in Sources */,
 				2DE2B652285C92C40076002D /* MultiContent.swift in Sources */,
 				2DE2B655285C9F240076002D /* SlidesCarouselTableViewCell.swift in Sources */,
+				2D924053286638F900AFBAF4 /* VideoTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

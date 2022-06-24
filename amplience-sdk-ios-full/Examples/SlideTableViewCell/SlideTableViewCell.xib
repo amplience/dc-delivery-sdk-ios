@@ -48,6 +48,12 @@
                                     <action selector="actionButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="JGo-lk-5J4"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NuK-ve-KLp">
+                                <rect key="frame" x="10" y="64" width="310" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qVb-6H-WuI"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -55,8 +61,11 @@
                             <constraint firstItem="qVb-6H-WuI" firstAttribute="bottom" secondItem="CeS-ar-Et5" secondAttribute="bottom" id="AM5-Nj-ldW"/>
                             <constraint firstItem="zcp-G4-Dt0" firstAttribute="top" secondItem="zdO-Zk-C0R" secondAttribute="bottom" id="Crv-Fe-qRb"/>
                             <constraint firstItem="CeS-ar-Et5" firstAttribute="leading" secondItem="qVb-6H-WuI" secondAttribute="leading" id="DlR-hE-RM7"/>
+                            <constraint firstItem="NuK-ve-KLp" firstAttribute="leading" secondItem="zcp-G4-Dt0" secondAttribute="leading" id="OeK-0b-0D6"/>
                             <constraint firstItem="zcp-G4-Dt0" firstAttribute="trailing" secondItem="zdO-Zk-C0R" secondAttribute="trailing" id="UOm-2K-12O"/>
                             <constraint firstItem="zdO-Zk-C0R" firstAttribute="top" secondItem="CeS-ar-Et5" secondAttribute="top" constant="10" id="XXS-vo-hKp"/>
+                            <constraint firstItem="NuK-ve-KLp" firstAttribute="trailing" secondItem="zcp-G4-Dt0" secondAttribute="trailing" id="ZSC-Pq-mnn"/>
+                            <constraint firstItem="NuK-ve-KLp" firstAttribute="top" secondItem="zcp-G4-Dt0" secondAttribute="bottom" id="fSL-3V-mYY"/>
                             <constraint firstItem="zcp-G4-Dt0" firstAttribute="leading" secondItem="zdO-Zk-C0R" secondAttribute="leading" id="i0C-CS-K7Z"/>
                             <constraint firstItem="CeS-ar-Et5" firstAttribute="top" secondItem="qVb-6H-WuI" secondAttribute="top" id="lmS-rN-CPa"/>
                             <constraint firstItem="zdO-Zk-C0R" firstAttribute="trailing" secondItem="CeS-ar-Et5" secondAttribute="trailing" id="mtY-QY-DNg"/>
@@ -80,6 +89,7 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="actionButton" destination="nyo-7z-JJq" id="uVA-4X-0WS"/>
+                <outlet property="altTextLabel" destination="NuK-ve-KLp" id="9X4-fq-K0l"/>
                 <outlet property="bannerImageView" destination="CeS-ar-Et5" id="iia-rr-kJ4"/>
                 <outlet property="bottomTitleLabel" destination="zcp-G4-Dt0" id="zec-F0-dfY"/>
                 <outlet property="topTitleLabel" destination="zdO-Zk-C0R" id="798-UX-e2v"/>

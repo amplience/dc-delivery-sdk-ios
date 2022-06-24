@@ -12,6 +12,7 @@ struct MultiContent: Codable {
     var text: String?
     var slides: [Slide] = []
     var banner: Banner?
+    var video: AmplienceVideo?
     
     var itemsCount: Int {
         var counter: Int = 0
@@ -25,6 +26,10 @@ struct MultiContent: Codable {
         }
         
         if !slides.isEmpty {
+            counter += 1
+        }
+        
+        if video != nil {
             counter += 1
         }
         
