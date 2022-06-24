@@ -34,6 +34,8 @@ class MultiContentViewController: UIViewController {
                         self.model.slides = slides.map { Slide(dict: $0) }
                     } else if let text = example["text"] as? String {
                         self.model.text = text
+                    } else if let video = example["video"] as? [String: Any] {
+                    
                     } else {
                         self.model.banner = Banner(dict: example)
                     }
