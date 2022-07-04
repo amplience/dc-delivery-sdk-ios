@@ -7,6 +7,11 @@
 
 import Foundation
 
+enum RequestOptions: String {
+    case all = "all"
+    case inlined = "inlined"
+}
+
 public typealias ContentResponseCompletion = (ContentResponse?, Error?) -> ()
 public typealias MultipleContentResponseCompletion = ([ContentResponse]?, Error?) -> ()
 public typealias PagedResponseCompletion = (PagedResponse?, Error?) -> ()
@@ -69,8 +74,8 @@ public class AmplienceManager {
      */
     public func getContentById(id: String, completion: @escaping ContentResponseCompletion) {
         let params: [String: Any] = [
-            "depth": "all",
-            "format": "inlined"
+            "depth": RequestOptions.all.rawValue,
+            "format": RequestOptions.inlined.rawValue
         ]
         let url = currentBaseUrl + "content/id/\(id)"
         BaseRequest().GET(url: url, params: params, object: ContentResponse.self, token: freshApiKey) {
@@ -89,8 +94,8 @@ public class AmplienceManager {
      */
     public func getContentByKey(key: String, completion: @escaping ContentResponseCompletion) {
         let params: [String: Any] = [
-            "depth": "all",
-            "format": "inlined"
+            "depth": RequestOptions.all.rawValue,
+            "format": RequestOptions.inlined.rawValue
         ]
         let url = currentBaseUrl + "content/key/\(key)"
         BaseRequest().GET(url: url, params: params, object: ContentResponse.self, token: freshApiKey) {
