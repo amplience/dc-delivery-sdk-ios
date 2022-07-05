@@ -18,6 +18,6 @@ import Foundation
  * the nextCursor property of the response if there are further results.
  */
 public struct Page: Codable {
-    let size: Int
-    let cursor: String?
+    public let size: Int
+    public let cursor: String?
 }

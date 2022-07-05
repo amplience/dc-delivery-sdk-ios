@@ -8,6 +8,6 @@
 import Foundation
 
 public struct PagedResponse: Codable {
-    let responses: Array<ContentResponse>
+    public let responses: Array<ContentResponse>
     let page: PageData
 }

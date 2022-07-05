@@ -17,8 +17,14 @@ import Foundation
  * @property page - Pagination
  */
 public struct FilterRequest: Codable {
-    let filterBy: Array<FilterBy>
-    let sortBy: SortBy?
-    let page: Page?
-    var parameters: Parameters = Parameters()
+    public let filterBy: Array<FilterBy>
+    public let sortBy: SortBy?
+    public let page: Page?
+    public var parameters: Parameters = Parameters()
+    
+    public init(filterBy: Array<FilterBy>, sortBy: SortBy?, page: Page?) {
+        self.filterBy = filterBy
+        self.sortBy = sortBy
+        self.page = page
+    }
 }

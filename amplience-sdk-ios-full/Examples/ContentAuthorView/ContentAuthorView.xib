@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContentAuthorView" customModule="amplience_sdk_ios_full" customModuleProvider="target">
+            <connections>
+                <outlet property="avatarImageView" destination="kaR-4F-mf2" id="gOh-TE-V2B"/>
+                <outlet property="containerView" destination="iN0-l3-epB" id="eQV-zc-Imc"/>
+                <outlet property="nameLabel" destination="BaX-jh-jGD" id="PC9-ix-GkT"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="518" height="110"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OZN-5d-dc3">
+                    <rect key="frame" x="0.0" y="0.0" width="518" height="110"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kaR-4F-mf2">
+                            <rect key="frame" x="10" y="25" width="60" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="9RQ-zE-esk"/>
+                                <constraint firstAttribute="width" constant="60" id="IJb-0B-dRM"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="30"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BaX-jh-jGD">
+                            <rect key="frame" x="80" y="46.5" width="428" height="17"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="BaX-jh-jGD" firstAttribute="leading" secondItem="kaR-4F-mf2" secondAttribute="trailing" constant="10" id="Byo-PV-uvQ"/>
+                        <constraint firstAttribute="trailing" secondItem="BaX-jh-jGD" secondAttribute="trailing" constant="10" id="YD7-Tb-0uT"/>
+                        <constraint firstItem="kaR-4F-mf2" firstAttribute="leading" secondItem="OZN-5d-dc3" secondAttribute="leading" constant="10" id="g5T-us-eIh"/>
+                        <constraint firstItem="BaX-jh-jGD" firstAttribute="centerY" secondItem="OZN-5d-dc3" secondAttribute="centerY" id="ldK-2h-zxM"/>
+                        <constraint firstItem="kaR-4F-mf2" firstAttribute="centerY" secondItem="OZN-5d-dc3" secondAttribute="centerY" id="rgU-3N-mdl"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="OZN-5d-dc3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Wqw-ZX-1VD"/>
+                <constraint firstItem="OZN-5d-dc3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="YY2-kh-FVC"/>
+                <constraint firstItem="OZN-5d-dc3" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="cE9-fU-awc"/>
+                <constraint firstAttribute="bottom" secondItem="OZN-5d-dc3" secondAttribute="bottom" id="jbP-N8-flZ"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="213.04347826086959" y="289.95535714285711"/>
+        </view>
+    </objects>
+</document>

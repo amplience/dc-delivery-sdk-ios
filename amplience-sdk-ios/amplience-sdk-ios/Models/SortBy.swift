@@ -18,6 +18,11 @@ public enum Order: String, Codable {
  * @property order - Optional, can be [Order.ASC] (ascending) or [Order.DESC] (descending). ASC by default
  */
 public struct SortBy: Codable {
-    let key: String
-    var order: Order = Order.ASC
+    public let key: String
+    public var order: Order = Order.ASC
+    
+    public init(key: String, order: Order) {
+        self.key = key
+        self.order = order
+    }
 }
