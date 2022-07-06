@@ -16,6 +16,13 @@
 		2D799F4B285CA62100EA9932 /* SlideCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D799F49285CA62100EA9932 /* SlideCollectionViewCell.xib */; };
 		2D924053286638F900AFBAF4 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D924051286638F900AFBAF4 /* VideoTableViewCell.swift */; };
 		2D924054286638F900AFBAF4 /* VideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D924052286638F900AFBAF4 /* VideoTableViewCell.xib */; };
+		2DA04BD9287447D600F6BEF5 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA04BD8287447D600F6BEF5 /* FilterViewController.swift */; };
+		2DA04BDB2874498F00F6BEF5 /* ToolbarPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA04BDA2874498F00F6BEF5 /* ToolbarPickerView.swift */; };
+		2DA04BDF2874615400F6BEF5 /* FilterContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA04BDD2874615400F6BEF5 /* FilterContentTableViewCell.swift */; };
+		2DA04BE02874615400F6BEF5 /* FilterContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DA04BDE2874615400F6BEF5 /* FilterContentTableViewCell.xib */; };
+		2DA04BE22874634800F6BEF5 /* FilterContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA04BE12874634800F6BEF5 /* FilterContent.swift */; };
+		2DA04BE528746F7F00F6BEF5 /* ContentAuthorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA04BE428746F7F00F6BEF5 /* ContentAuthorView.swift */; };
+		2DA04BE728746F8400F6BEF5 /* ContentAuthorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DA04BE628746F8400F6BEF5 /* ContentAuthorView.xib */; };
 		2DE141D3282AF2F000AD741E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE141D2282AF2F000AD741E /* AppDelegate.swift */; };
 		2DE141D5282AF2F000AD741E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE141D4282AF2F000AD741E /* SceneDelegate.swift */; };
 		2DE141DA282AF2F000AD741E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DE141D8282AF2F000AD741E /* Main.storyboard */; };
@@ -58,6 +65,13 @@
 		2D799F49285CA62100EA9932 /* SlideCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlideCollectionViewCell.xib; sourceTree = "<group>"; };
 		2D924051286638F900AFBAF4 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
 		2D924052286638F900AFBAF4 /* VideoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoTableViewCell.xib; sourceTree = "<group>"; };
+		2DA04BD8287447D600F6BEF5 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		2DA04BDA2874498F00F6BEF5 /* ToolbarPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarPickerView.swift; sourceTree = "<group>"; };
+		2DA04BDD2874615400F6BEF5 /* FilterContentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterContentTableViewCell.swift; sourceTree = "<group>"; };
+		2DA04BDE2874615400F6BEF5 /* FilterContentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterContentTableViewCell.xib; sourceTree = "<group>"; };
+		2DA04BE12874634800F6BEF5 /* FilterContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterContent.swift; sourceTree = "<group>"; };
+		2DA04BE428746F7F00F6BEF5 /* ContentAuthorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentAuthorView.swift; sourceTree = "<group>"; };
+		2DA04BE628746F8400F6BEF5 /* ContentAuthorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentAuthorView.xib; sourceTree = "<group>"; };
 		2DE141CF282AF2F000AD741E /* amplience-sdk-ios-full.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "amplience-sdk-ios-full.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DE141D2282AF2F000AD741E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DE141D4282AF2F000AD741E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +127,24 @@
 				2D924052286638F900AFBAF4 /* VideoTableViewCell.xib */,
 			);
 			path = VideoTableViewCell;
+			sourceTree = "<group>";
+		};
+		2DA04BDC2874613A00F6BEF5 /* FilterContentTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2DA04BDD2874615400F6BEF5 /* FilterContentTableViewCell.swift */,
+				2DA04BDE2874615400F6BEF5 /* FilterContentTableViewCell.xib */,
+			);
+			path = FilterContentTableViewCell;
+			sourceTree = "<group>";
+		};
+		2DA04BE328746F6B00F6BEF5 /* ContentAuthorView */ = {
+			isa = PBXGroup;
+			children = (
+				2DA04BE428746F7F00F6BEF5 /* ContentAuthorView.swift */,
+				2DA04BE628746F8400F6BEF5 /* ContentAuthorView.xib */,
+			);
+			path = ContentAuthorView;
 			sourceTree = "<group>";
 		};
 		2DE141C6282AF2F000AD741E = {
@@ -177,12 +209,16 @@
 		B08C2EDD283FA4150000B1AE /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				2DA04BE328746F6B00F6BEF5 /* ContentAuthorView */,
+				2DA04BDC2874613A00F6BEF5 /* FilterContentTableViewCell */,
 				2D799F47285CA60A00EA9932 /* SlideCollectionViewCell */,
 				B08C2EDA283FA4040000B1AE /* BannerViewController.swift */,
 				2D6FC185285A7C31004C861C /* SlidesViewController.swift */,
 				2D6FC18B285A7D41004C861C /* SlideTableViewCell */,
 				2DE2B64F285C90780076002D /* MultiContentViewController.swift */,
 				2DE2B657285C9F320076002D /* SlidesCarouselTableViewCell */,
+				2DA04BD8287447D600F6BEF5 /* FilterViewController.swift */,
+				2DA04BDA2874498F00F6BEF5 /* ToolbarPickerView.swift */,
 			);
 			path = Examples;
 			sourceTree = "<group>";
@@ -194,6 +230,7 @@
 				2D6FC18C285A807D004C861C /* Slide.swift */,
 				2D6FC18E285A8212004C861C /* ImageItem.swift */,
 				2DE2B651285C92C40076002D /* MultiContent.swift */,
+				2DA04BE12874634800F6BEF5 /* FilterContent.swift */,
 			);
 			path = "Example custom model";
 			sourceTree = "<group>";
@@ -273,9 +310,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DA04BE728746F8400F6BEF5 /* ContentAuthorView.xib in Resources */,
 				2D924054286638F900AFBAF4 /* VideoTableViewCell.xib in Resources */,
 				2D799F4B285CA62100EA9932 /* SlideCollectionViewCell.xib in Resources */,
 				2DE141DF282AF2F100AD741E /* LaunchScreen.storyboard in Resources */,
+				2DA04BE02874615400F6BEF5 /* FilterContentTableViewCell.xib in Resources */,
 				2DE141DC282AF2F100AD741E /* Assets.xcassets in Resources */,
 				2DE2B656285C9F240076002D /* SlidesCarouselTableViewCell.xib in Resources */,
 				2DE141DA282AF2F000AD741E /* Main.storyboard in Resources */,
@@ -294,12 +333,17 @@
 				B08C2ED6283FA2330000B1AE /* MenuTableViewController.swift in Sources */,
 				2DE141D3282AF2F000AD741E /* AppDelegate.swift in Sources */,
 				B08C2ED9283FA36F0000B1AE /* MenuTableViewCell.swift in Sources */,
+				2DA04BDF2874615400F6BEF5 /* FilterContentTableViewCell.swift in Sources */,
 				2D6FC18F285A8212004C861C /* ImageItem.swift in Sources */,
+				2DA04BE22874634800F6BEF5 /* FilterContent.swift in Sources */,
 				2D6FC186285A7C31004C861C /* SlidesViewController.swift in Sources */,
 				2DE141D5282AF2F000AD741E /* SceneDelegate.swift in Sources */,
 				2D6FC18D285A807D004C861C /* Slide.swift in Sources */,
+				2DA04BDB2874498F00F6BEF5 /* ToolbarPickerView.swift in Sources */,
+				2DA04BE528746F7F00F6BEF5 /* ContentAuthorView.swift in Sources */,
 				2D799F4A285CA62100EA9932 /* SlideCollectionViewCell.swift in Sources */,
 				B08C2EE4283FBDB60000B1AE /* Banner.swift in Sources */,
+				2DA04BD9287447D600F6BEF5 /* FilterViewController.swift in Sources */,
 				2D6FC189285A7D34004C861C /* SlideTableViewCell.swift in Sources */,
 				2DE2B650285C90780076002D /* MultiContentViewController.swift in Sources */,
 				2DE2B652285C92C40076002D /* MultiContent.swift in Sources */,

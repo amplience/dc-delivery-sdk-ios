@@ -14,6 +14,11 @@ import Foundation
  * @property value - The value to match against
  */
 public struct FilterBy: Codable {
-    let path: String
-    let value: String
+    public let path: String
+    public let value: String
+    
+    public init(path: String, value: String) {
+        self.path = path
+        self.value = value
+    }
 }

@@ -7,6 +7,11 @@
 
 import Foundation
 
+enum RequestOptions: String {
+    case all = "all"
+    case inlined = "inlined"
+}
+
 public typealias ContentResponseCompletion = (ContentResponse?, Error?) -> ()
 public typealias MultipleContentResponseCompletion = ([ContentResponse]?, Error?) -> ()
 public typealias PagedResponseCompletion = (PagedResponse?, Error?) -> ()
@@ -69,8 +74,8 @@ public class AmplienceManager {
      */
     public func getContentById(id: String, completion: @escaping ContentResponseCompletion) {
         let params: [String: Any] = [
-            "depth": "all",
-            "format": "inlined"
+            "depth": RequestOptions.all.rawValue,
+            "format": RequestOptions.inlined.rawValue
         ]
         let url = currentBaseUrl + "content/id/\(id)"
         BaseRequest().GET(url: url, params: params, object: ContentResponse.self, token: freshApiKey) {
@@ -89,8 +94,8 @@ public class AmplienceManager {
      */
     public func getContentByKey(key: String, completion: @escaping ContentResponseCompletion) {
         let params: [String: Any] = [
-            "depth": "all",
-            "format": "inlined"
+            "depth": RequestOptions.all.rawValue,
+            "format": RequestOptions.inlined.rawValue
         ]
         let url = currentBaseUrl + "content/key/\(key)"
         BaseRequest().GET(url: url, params: params, object: ContentResponse.self, token: freshApiKey) {
@@ -108,11 +113,39 @@ public class AmplienceManager {
      * Can get successful result with result.getOrNull()
      * Can get error response with result.getExceptionOrNull()
      */
-    public func getMultipleContent(contentRequest: ContentRequest, completion: @escaping MultipleContentResponseCompletion) {
+    private func getMultipleContent(contentRequest: ContentRequest, completion: @escaping MultipleContentResponseCompletion) {
         let url = currentBaseUrl + "content/fetch"
         BaseRequest().POST(url: url, requestObject: contentRequest, responseType: [ContentResponse].self) { result, error in
             completion(result, error)
         }
+    }
+    
+    /**
+     * [getContentItemsById]
+     * @param ids - ids  of content to get
+     * @param parameters - to set depth/local/format
+     *
+     * @return [Result]List<[ContentResponse]>- returns either a success or failure.
+     * Can get successful result with result.getOrNull()
+     * Can get error response with result.getExceptionOrNull()
+     */
+    public func getContentItemsById(ids: [String], parameters: Parameters, completion: @escaping MultipleContentResponseCompletion) {
+        let request = ContentRequest(requests: ids.map { Request(id: $0, key: nil) }, parameters: parameters)
+        getMultipleContent(contentRequest: request, completion: completion)
+    }
+    
+    /**
+     * [getContentItemsByKey]
+     * @param keys - keys  of content to get
+     * @param parameters - to set depth/local/format
+     *
+     * @return [Result]List<[ContentResponse]>- returns either a success or failure.
+     * Can get successful result with result.getOrNull()
+     * Can get error response with result.getExceptionOrNull()
+     */
+    public func getContentItemsByKey(keys: [String], parameters: Parameters, completion: @escaping MultipleContentResponseCompletion) {
+        let request = ContentRequest(requests: keys.map { Request(id: $0, key: nil) }, parameters: parameters)
+        getMultipleContent(contentRequest: request, completion: completion)
     }
 
     /**

@@ -9,7 +9,7 @@ import Foundation
 
 public struct AmplienceImage: Codable {
     let id: String
-    let name: String
+    public let name: String
     let endpoint: String
     let defaultHost: String
     

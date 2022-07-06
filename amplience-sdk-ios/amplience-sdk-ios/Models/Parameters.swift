@@ -13,7 +13,7 @@ import Foundation
  * @property locale
  */
 public struct Parameters: Codable {
-    var depth: String = "all"
-    var format: String = "inlined"
-    var locale: String?
+    public var depth: String = "all"
+    public var format: String = "inlined"
+    public var locale: String?
 }
