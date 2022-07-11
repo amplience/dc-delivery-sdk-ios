@@ -7,6 +7,7 @@
 
 import UIKit
 import Amplience
+import AVKit
 
 class MultiContentViewController: UIViewController {
 
@@ -107,6 +108,11 @@ extension MultiContentViewController: SlideTableViewCellDelegate {
 
 extension MultiContentViewController: VideoTableViewCellDelegate {
     func playVideo(_ url: URL) {
-        UIApplication.shared.open(url)
+        let player = AVPlayer(url: url)
+        let playerViewController = AVPlayerViewController()
+        playerViewController.player = player
+        self.present(playerViewController, animated: true) {
+            playerViewController.player!.play()
+        }
     }
 }
