@@ -189,7 +189,7 @@ public class AmplienceManager {
     public func getVideoUrl(
         video: AmplienceVideo
     ) -> String {
-      return "https://\(video.defaultHost)/i/\(video.endpoint)/\(video.name)/mp4_720p"
+      return "https://\(video.defaultHost)/v/\(video.endpoint)/\(video.name)/mp4_720p"
     }
 
     /**
