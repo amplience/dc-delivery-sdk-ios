@@ -32,6 +32,7 @@
 		2DE2B652285C92C40076002D /* MultiContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE2B651285C92C40076002D /* MultiContent.swift */; };
 		2DE2B655285C9F240076002D /* SlidesCarouselTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE2B653285C9F240076002D /* SlidesCarouselTableViewCell.swift */; };
 		2DE2B656285C9F240076002D /* SlidesCarouselTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DE2B654285C9F240076002D /* SlidesCarouselTableViewCell.xib */; };
+		2DF41C5E2885C76E00E2642B /* LinkedContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF41C5D2885C76E00E2642B /* LinkedContent.swift */; };
 		B08C2ED6283FA2330000B1AE /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08C2ED5283FA2330000B1AE /* MenuTableViewController.swift */; };
 		B08C2ED9283FA36F0000B1AE /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08C2ED8283FA36F0000B1AE /* MenuTableViewCell.swift */; };
 		B08C2EDB283FA4040000B1AE /* BannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08C2EDA283FA4040000B1AE /* BannerViewController.swift */; };
@@ -84,6 +85,7 @@
 		2DE2B651285C92C40076002D /* MultiContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiContent.swift; sourceTree = "<group>"; };
 		2DE2B653285C9F240076002D /* SlidesCarouselTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidesCarouselTableViewCell.swift; sourceTree = "<group>"; };
 		2DE2B654285C9F240076002D /* SlidesCarouselTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlidesCarouselTableViewCell.xib; sourceTree = "<group>"; };
+		2DF41C5D2885C76E00E2642B /* LinkedContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedContent.swift; sourceTree = "<group>"; };
 		B08C2ED5283FA2330000B1AE /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		B08C2ED8283FA36F0000B1AE /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		B08C2EDA283FA4040000B1AE /* BannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerViewController.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 				2D6FC18E285A8212004C861C /* ImageItem.swift */,
 				2DE2B651285C92C40076002D /* MultiContent.swift */,
 				2DA04BE12874634800F6BEF5 /* FilterContent.swift */,
+				2DF41C5D2885C76E00E2642B /* LinkedContent.swift */,
 			);
 			path = "Example custom model";
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				2DA04BE22874634800F6BEF5 /* FilterContent.swift in Sources */,
 				2D6FC186285A7C31004C861C /* SlidesViewController.swift in Sources */,
 				2DE141D5282AF2F000AD741E /* SceneDelegate.swift in Sources */,
+				2DF41C5E2885C76E00E2642B /* LinkedContent.swift in Sources */,
 				2D6FC18D285A807D004C861C /* Slide.swift in Sources */,
 				2DA04BDB2874498F00F6BEF5 /* ToolbarPickerView.swift in Sources */,
 				2DA04BE528746F7F00F6BEF5 /* ContentAuthorView.swift in Sources */,
