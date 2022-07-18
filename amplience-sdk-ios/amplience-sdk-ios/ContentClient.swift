@@ -105,7 +105,7 @@ public class ContentClient {
     }
 
     /**
-     * [getMultipleContent]
+     * [listContent]
      * @param requests - ids or keys of content to get
      * @param locale (optional) - to override default locale
      *
@@ -113,7 +113,7 @@ public class ContentClient {
      * Can get successful result with result.getOrNull()
      * Can get error response with result.getExceptionOrNull()
      */
-    private func getMultipleContent(contentRequest: ListContentRequest, completion: @escaping MultipleContentResponseCompletion) {
+    private func listContent(contentRequest: ListContentRequest, completion: @escaping MultipleContentResponseCompletion) {
         let url = currentBaseUrl + "content/fetch"
         BaseRequest().POST(url: url, requestObject: contentRequest, responseType: [ContentResponse].self) { result, error in
             completion(result, error)
@@ -121,7 +121,7 @@ public class ContentClient {
     }
     
     /**
-     * [getContentItemsById]
+     * [listContentById]
      * @param ids - ids  of content to get
      * @param parameters - to set depth/local/format
      *
@@ -129,13 +129,13 @@ public class ContentClient {
      * Can get successful result with result.getOrNull()
      * Can get error response with result.getExceptionOrNull()
      */
-    public func getContentItemsById(ids: [String], parameters: Parameters, completion: @escaping MultipleContentResponseCompletion) {
+    public func listContentById(ids: [String], parameters: Parameters, completion: @escaping MultipleContentResponseCompletion) {
         let request = ListContentRequest(requests: ids.map { ContentRequest(id: $0, key: nil) }, parameters: parameters)
-        getMultipleContent(contentRequest: request, completion: completion)
+        listContent(contentRequest: request, completion: completion)
     }
     
     /**
-     * [getContentItemsByKey]
+     * [listContentByKey]
      * @param keys - keys  of content to get
      * @param parameters - to set depth/local/format
      *
@@ -143,13 +143,13 @@ public class ContentClient {
      * Can get successful result with result.getOrNull()
      * Can get error response with result.getExceptionOrNull()
      */
-    public func getContentItemsByKey(keys: [String], parameters: Parameters, completion: @escaping MultipleContentResponseCompletion) {
+    public func listContentByKey(keys: [String], parameters: Parameters, completion: @escaping MultipleContentResponseCompletion) {
         let request = ListContentRequest(requests: keys.map { ContentRequest(id: $0, key: nil) }, parameters: parameters)
-        getMultipleContent(contentRequest: request, completion: completion)
+        listContent(contentRequest: request, completion: completion)
     }
 
     /**
-     * [getContentByFilters]
+     * [filterContent]
      * @param filters - any number of [FilterBy] key value pairs
      * @param sortBy (optional) - a key [SortBy.key] and optional order
      * @param page (optional) - pagination
@@ -159,7 +159,7 @@ public class ContentClient {
      * Can get successful result with result.getOrNull()
      * Can get error response with result.getExceptionOrNull()
      */
-    public func getContentByFilters(filterRequest: FilterRequest, completion: @escaping PagedResponseCompletion) {
+    public func filterContent(filterRequest: FilterContentRequest, completion: @escaping PagedResponseCompletion) {
         let url = currentBaseUrl + "content/filter"
         BaseRequest().POST(url: url, requestObject: filterRequest, responseType: FilterContentResponse.self) { result, error in
             completion(result, error)
