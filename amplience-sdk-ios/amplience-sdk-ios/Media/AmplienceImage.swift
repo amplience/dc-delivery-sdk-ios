@@ -24,7 +24,15 @@ public struct AmplienceImage: Codable {
         defaultHost = dict[CodingKeys.defaultHost.rawValue] as! String
     }
 
-    func getUrl() -> String {
-        return ""//TODO: AmplienceManager.getInstance().getImageUrl(this)
+    /**
+     * [getImageUrl] returns a url that can be used with any image loading libraries
+     *
+     * @param image - implementation of an [AmplienceImage]
+     * @param builder (optional) - manipulate the image. See [ImageUrlBuilder] for more info
+     */
+    public func getImageUrl(builder: ImageUrlBuilder) -> String {
+        var string = "https://\(defaultHost)/i/\(endpoint)/\(name)"
+        string += builder.build()
+        return string
     }
 }

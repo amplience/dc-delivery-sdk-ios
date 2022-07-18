@@ -18,7 +18,7 @@ class SlideCollectionViewCell: UICollectionViewCell {
     }
     
     func configure(with slide: Slide) {
-        let url = AmplienceManager.shared.getImageUrl(image: slide.imageItem, builder: ImageUrlBuilder())
+        let url = slide.imageItem.getImageUrl(builder: ImageUrlBuilder())
         ImageLoader.shared.loadImage(urlString: url, completion: { [weak self] image in
             guard let self = self else { return }
             self.slideImageView.image = image

@@ -28,7 +28,7 @@ class ContentAuthorView: UIView {
         nameLabel.text = model.name
         
         if let bg = model.avatar?.image {
-            let url = AmplienceManager.shared.getImageUrl(image: bg, builder: ImageUrlBuilder())
+            let url = bg.getImageUrl(builder: ImageUrlBuilder())
             ImageLoader.shared.loadImage(urlString: url, completion: { [weak self] image in
                 guard let self = self else { return }
                 self.avatarImageView.image = image

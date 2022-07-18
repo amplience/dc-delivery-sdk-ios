@@ -43,7 +43,7 @@ class SlideTableViewCell: UITableViewCell {
         topTitleLabel.text = slide.headline
         bottomTitleLabel.text = slide.subheading
         
-        let url = AmplienceManager.shared.getImageUrl(image: slide.imageItem, builder: ImageUrlBuilder())
+        let url = slide.imageItem.getImageUrl(builder: ImageUrlBuilder())
         ImageLoader.shared.loadImage(urlString: url, completion: { [weak self] image in
             guard let self = self else { return }
             self.bannerImageView.image = image
@@ -58,7 +58,7 @@ class SlideTableViewCell: UITableViewCell {
         actionButton.isHidden = false
         altTextLabel.text = banner.background?.alt ?? ""
         if let bg = banner.background?.image {
-            let url = AmplienceManager.shared.getImageUrl(image: bg, builder: ImageUrlBuilder())
+            let url = bg.getImageUrl(builder: ImageUrlBuilder())
             ImageLoader.shared.loadImage(urlString: url, completion: { [weak self] image in
                 guard let self = self else { return }
                 self.bannerImageView.image = image

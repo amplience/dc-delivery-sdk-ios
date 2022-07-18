@@ -40,7 +40,7 @@ class FilterContentTableViewCell: UITableViewCell {
         
         imageTopLabel.text = model.image?.image.name
         if let bg = model.image?.image {
-            let url = AmplienceManager.shared.getImageUrl(image: bg, builder: ImageUrlBuilder())
+            let url = bg.getImageUrl(builder: ImageUrlBuilder())
             ImageLoader.shared.loadImage(urlString: url, completion: { [weak self] image in
                 guard let self = self else { return }
                 self.bannerImageView.image = image

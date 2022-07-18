@@ -28,7 +28,7 @@ class VideoTableViewCell: UITableViewCell {
     }
 
     @IBAction func playButtonPressed(_ sender: Any) {
-        guard let model = model, let url = URL(string: AmplienceManager.shared.getVideoUrl(video: model)) else { return }
+        guard let model = model, let url = URL(string: model.getVideoUrl()) else { return }
         delegate?.playVideo(url)
     }
     
