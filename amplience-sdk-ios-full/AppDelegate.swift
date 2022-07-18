@@ -17,8 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
 
         // Start the Amplience manager and set the hub name...
-        AmplienceManager.shared.isFresh = false
-        AmplienceManager.shared.hub = "ampproduct-doc"
+        ContentClient.shared.isFresh = false
+        ContentClient.shared.hub = "ampproduct-doc"
 
         return true
     }

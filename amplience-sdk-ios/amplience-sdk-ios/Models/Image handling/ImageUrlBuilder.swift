@@ -19,7 +19,7 @@ public class ImageUrlBuilder {
     private var scaleFit: ScaleFit? = nil
     private var resizeAlgorithm: ResizeAlgorithm? = nil
     private var upscale: Upscale? = nil
-    private var format: Format? = nil
+    private var format: ContentFormat? = nil
     private var autoFormat: Bool? = nil
     private var formatQuality: FormatQuality? = nil
     private var crop: Crop? = nil
@@ -78,7 +78,7 @@ public class ImageUrlBuilder {
      * @param format - choose from 6 [Format]s
      * @param quality - select a quality percentage 0-100 (does not apply to [Format.Gif] or [Format.Bmp])
      */
-    func format(format: Format, quality: Int? = nil) {
+    func format(format: ContentFormat, quality: Int? = nil) {
         self.format = format
         if format == .Webp {
             formatQuality = Webp(quality: quality)

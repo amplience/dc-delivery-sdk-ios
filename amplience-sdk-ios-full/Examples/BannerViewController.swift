@@ -40,7 +40,7 @@ class BannerViewController: UIViewController {
     
     
     private func loadBanner() {
-        AmplienceManager.shared.getContentByKey(key: "example-key") { [weak self] response, error in
+        ContentClient.shared.getContentByKey(key: "example-key") { [weak self] response, error in
             guard let self = self else { return }
             if error != nil {
                 print(error!.localizedDescription)

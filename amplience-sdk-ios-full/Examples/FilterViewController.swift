@@ -86,7 +86,7 @@ class FilterViewController: UIViewController {
     private func performGetFilteredContent() {
         guard let category = selectedCategory else { return }
         
-        AmplienceManager.shared.getContentByFilters(filterRequest: FilterRequest(filterBy: [FilterBy(path: "/_meta/schema", value: "https://example.com/blog-post-filter-and-sort"), FilterBy(path: "/category", value: category)], sortBy: SortBy(key: "readTime", order: selectedSort == "ASC" ? .ASC : .DESC), page: nil)) { [weak self] response, error in
+        ContentClient.shared.getContentByFilters(filterRequest: FilterContentRequest(filterBy: [FilterBy(path: "/_meta/schema", value: "https://example.com/blog-post-filter-and-sort"), FilterBy(path: "/category", value: category)], sortBy: SortBy(key: "readTime", order: selectedSort == "ASC" ? .ASC : .DESC), page: nil)) { [weak self] response, error in
             
             if let items = response?.responses {
                 self?.filterItems = items.map { FilterContent(dict: $0.content) }

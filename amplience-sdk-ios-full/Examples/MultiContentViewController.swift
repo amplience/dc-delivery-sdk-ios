@@ -26,7 +26,7 @@ class MultiContentViewController: UIViewController {
     }
     
     private func fetchContent() {
-        AmplienceManager.shared.getContentByKey(key: "example-content-items") { [weak self] content, error in
+        ContentClient.shared.getContentByKey(key: "example-content-items") { [weak self] content, error in
             guard let self = self else { return }
             
             if let content = content?.content, let examples = content["examples"]?.value as? [[String: Any]] {

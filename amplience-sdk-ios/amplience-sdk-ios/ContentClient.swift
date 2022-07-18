@@ -1,5 +1,5 @@
 //
-//  AmplienceManager.swift
+//  ContentClient.swift
 //  amplience-sdk-ios
 //
 //  Created by Dylan McKee on 18/05/2022.
@@ -14,15 +14,15 @@ enum RequestOptions: String {
 
 public typealias ContentResponseCompletion = (ContentResponse?, Error?) -> ()
 public typealias MultipleContentResponseCompletion = ([ContentResponse]?, Error?) -> ()
-public typealias PagedResponseCompletion = (PagedResponse?, Error?) -> ()
+public typealias PagedResponseCompletion = (FilterContentResponse?, Error?) -> ()
 
-public class AmplienceManager {
+public class ContentClient {
 
     /**
      * [shared]
      * Get the current instance of the [AmplienceManager].
      */
-    public static let shared = AmplienceManager()
+    public static let shared = ContentClient()
 
     private init() {}
 
@@ -113,7 +113,7 @@ public class AmplienceManager {
      * Can get successful result with result.getOrNull()
      * Can get error response with result.getExceptionOrNull()
      */
-    private func getMultipleContent(contentRequest: ContentRequest, completion: @escaping MultipleContentResponseCompletion) {
+    private func getMultipleContent(contentRequest: ListContentRequest, completion: @escaping MultipleContentResponseCompletion) {
         let url = currentBaseUrl + "content/fetch"
         BaseRequest().POST(url: url, requestObject: contentRequest, responseType: [ContentResponse].self) { result, error in
             completion(result, error)
@@ -130,7 +130,7 @@ public class AmplienceManager {
      * Can get error response with result.getExceptionOrNull()
      */
     public func getContentItemsById(ids: [String], parameters: Parameters, completion: @escaping MultipleContentResponseCompletion) {
-        let request = ContentRequest(requests: ids.map { Request(id: $0, key: nil) }, parameters: parameters)
+        let request = ListContentRequest(requests: ids.map { ContentRequest(id: $0, key: nil) }, parameters: parameters)
         getMultipleContent(contentRequest: request, completion: completion)
     }
     
@@ -144,7 +144,7 @@ public class AmplienceManager {
      * Can get error response with result.getExceptionOrNull()
      */
     public func getContentItemsByKey(keys: [String], parameters: Parameters, completion: @escaping MultipleContentResponseCompletion) {
-        let request = ContentRequest(requests: keys.map { Request(id: $0, key: nil) }, parameters: parameters)
+        let request = ListContentRequest(requests: keys.map { ContentRequest(id: $0, key: nil) }, parameters: parameters)
         getMultipleContent(contentRequest: request, completion: completion)
     }
 
@@ -161,7 +161,7 @@ public class AmplienceManager {
      */
     public func getContentByFilters(filterRequest: FilterRequest, completion: @escaping PagedResponseCompletion) {
         let url = currentBaseUrl + "content/filter"
-        BaseRequest().POST(url: url, requestObject: filterRequest, responseType: PagedResponse.self) { result, error in
+        BaseRequest().POST(url: url, requestObject: filterRequest, responseType: FilterContentResponse.self) { result, error in
             completion(result, error)
         }
     }

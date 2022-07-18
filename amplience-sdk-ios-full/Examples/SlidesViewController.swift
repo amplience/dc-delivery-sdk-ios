@@ -28,7 +28,7 @@ class SlidesViewController: UIViewController {
     }
     
     private func fetchSlides() {
-        AmplienceManager.shared.getContentById(id: "bd89c2ed-0ed5-4304-8c89-c0710af500e2") { [weak self] content, error in
+        ContentClient.shared.getContentById(id: "bd89c2ed-0ed5-4304-8c89-c0710af500e2") { [weak self] content, error in
             guard let self = self else { return }
             
             if let content = content, let slides = content.content["slides"]?.value as? [[String: Any]] {

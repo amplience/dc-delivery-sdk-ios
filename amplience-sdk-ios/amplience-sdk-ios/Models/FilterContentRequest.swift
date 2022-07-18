@@ -1,5 +1,5 @@
 //
-//  FilterRequest.swift
+//  FilterContentRequest.swift
 //  amplience-sdk-ios
 //
 //  Created by Dylan McKee on 18/05/2022.
@@ -8,7 +8,7 @@
 import Foundation
 
 /**
- * [FilterRequest]
+ * [FilterContentRequest]
  *
  * @property filterBy - [FilterBy]/s to match to
  * If you specify multiple filters then all filters must be matched (AND).
@@ -16,7 +16,7 @@ import Foundation
  * @property parameters - Override depth, format and locale
  * @property page - Pagination
  */
-public struct FilterRequest: Codable {
+public struct FilterContentRequest: Codable {
     public let filterBy: Array<FilterBy>
     public let sortBy: SortBy?
     public let page: Page?
