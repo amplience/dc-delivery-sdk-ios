@@ -28,7 +28,7 @@ public struct AmplienceVideo: Codable {
      * @param video - implementation of an [AmplienceVideo]
      */
     public func getVideoUrl() -> String {
-        return "https://\(defaultHost)/v/\(endpoint)/\(name)/mp4_720p"
+        return "https://\(defaultHost)/v/\(endpoint)/\(name)/mp4_720p".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!.replacingOccurrences(of: "&", with: "%26").replacingOccurrences(of: "=", with: "%3D")
     }
 
     /**

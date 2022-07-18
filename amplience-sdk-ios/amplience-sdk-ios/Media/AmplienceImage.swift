@@ -31,7 +31,7 @@ public struct AmplienceImage: Codable {
      * @param builder (optional) - manipulate the image. See [ImageUrlBuilder] for more info
      */
     public func getImageUrl(builder: ImageUrlBuilder) -> String {
-        var string = "https://\(defaultHost)/i/\(endpoint)/\(name)"
+        var string = "https://\(defaultHost)/i/\(endpoint)/\(name)".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!.replacingOccurrences(of: "&", with: "%26").replacingOccurrences(of: "=", with: "%3D")
         string += builder.build()
         return string
     }
