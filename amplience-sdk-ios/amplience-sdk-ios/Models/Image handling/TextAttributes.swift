@@ -47,7 +47,7 @@ class RGB: TextColor {
     }
 }
 
-class ColourName: TextColor {
+class ColorName: TextColor {
     var name: String
     
     init(name: String) {

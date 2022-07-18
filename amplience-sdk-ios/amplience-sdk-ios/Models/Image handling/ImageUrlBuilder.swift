@@ -35,7 +35,7 @@ public class ImageUrlBuilder {
     private var dpiFilter: DpiFilter? = nil
     private var strip: Bool = false
     private var chromaSubsampling: Bool = true
-    private var colourSpace: ColourSpace? = nil
+    private var colorSpace: ColorSpace? = nil
     private var unsharp: Unsharp? = nil
     private var compositeMode: CompositeMode? = nil
     private var backgroundRgb: (r: Int, g: Int, b: Int)? = nil
@@ -164,7 +164,7 @@ public class ImageUrlBuilder {
     
     func setChromaSubsampling(chromaSubsampling: Bool) { self.chromaSubsampling = chromaSubsampling }
     
-    func setColourSpace(colourSpace: ColourSpace) { self.colourSpace = colourSpace }
+    func setColorSpace(colorSpace: ColorSpace) { self.colorSpace = colorSpace }
     func setUnsharp(unsharp: Unsharp) { self.unsharp = unsharp }
     func setCompositeMode(compositeMode: CompositeMode) { self.compositeMode = compositeMode }
     func setBackground(red: Int, green: Int, blue: Int) {
@@ -340,8 +340,8 @@ public class ImageUrlBuilder {
         if (!chromaSubsampling) {
             addQuery(query: "fmt.jpeg.chroma=1,1,1")
         }
-        if (colourSpace != nil) {
-            addQuery(query: "cs=\(colourSpace!)")
+        if (colorSpace != nil) {
+            addQuery(query: "cs=\(colorSpace!)")
         }
         if (unsharp != nil) {
             addQuery(query: "unsharp=\(unsharp!.radius),\(unsharp!.sigma),\(unsharp!.amount),\(unsharp!.threshold)")

@@ -21,7 +21,7 @@
 		B0262B822834E8F800510C8F /* PagedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0262B812834E8F800510C8F /* PagedResponse.swift */; };
 		B0262B842834E91900510C8F /* SortBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0262B832834E91900510C8F /* SortBy.swift */; };
 		B0262B872834E9B100510C8F /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0262B862834E9B100510C8F /* Blur.swift */; };
-		B0262B892834E9CD00510C8F /* ColourSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0262B882834E9CD00510C8F /* ColourSpace.swift */; };
+		B0262B892834E9CD00510C8F /* ColorSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0262B882834E9CD00510C8F /* ColorSpace.swift */; };
 		B0262B8B2834EB3D00510C8F /* CompositeMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0262B8A2834EB3D00510C8F /* CompositeMode.swift */; };
 		B0262B8D2834EB8C00510C8F /* Crop.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0262B8C2834EB8C00510C8F /* Crop.swift */; };
 		B0262B8F2834ED5000510C8F /* DpiFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0262B8E2834ED5000510C8F /* DpiFilter.swift */; };
@@ -63,7 +63,7 @@
 		B0262B812834E8F800510C8F /* PagedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagedResponse.swift; sourceTree = "<group>"; };
 		B0262B832834E91900510C8F /* SortBy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortBy.swift; sourceTree = "<group>"; };
 		B0262B862834E9B100510C8F /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
-		B0262B882834E9CD00510C8F /* ColourSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourSpace.swift; sourceTree = "<group>"; };
+		B0262B882834E9CD00510C8F /* ColorSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSpace.swift; sourceTree = "<group>"; };
 		B0262B8A2834EB3D00510C8F /* CompositeMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositeMode.swift; sourceTree = "<group>"; };
 		B0262B8C2834EB8C00510C8F /* Crop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crop.swift; sourceTree = "<group>"; };
 		B0262B8E2834ED5000510C8F /* DpiFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DpiFilter.swift; sourceTree = "<group>"; };
@@ -160,7 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				B0262B862834E9B100510C8F /* Blur.swift */,
-				B0262B882834E9CD00510C8F /* ColourSpace.swift */,
+				B0262B882834E9CD00510C8F /* ColorSpace.swift */,
 				B0262B8A2834EB3D00510C8F /* CompositeMode.swift */,
 				B0262B8C2834EB8C00510C8F /* Crop.swift */,
 				B0262B8E2834ED5000510C8F /* DpiFilter.swift */,
@@ -287,7 +287,7 @@
 				B0262B782834E80600510C8F /* Parameters.swift in Sources */,
 				B0262B842834E91900510C8F /* SortBy.swift in Sources */,
 				B0262B8B2834EB3D00510C8F /* CompositeMode.swift in Sources */,
-				B0262B892834E9CD00510C8F /* ColourSpace.swift in Sources */,
+				B0262B892834E9CD00510C8F /* ColorSpace.swift in Sources */,
 				B0262B952834EE3A00510C8F /* FormatQuality.swift in Sources */,
 				B0262B9B2835304600510C8F /* ScaleFit.swift in Sources */,
 				B0262B9728352E7E00510C8F /* ImageUrlBuilder.swift in Sources */,

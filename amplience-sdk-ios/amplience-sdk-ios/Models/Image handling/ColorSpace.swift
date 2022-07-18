@@ -1,5 +1,5 @@
 //
-//  ColourSpace.swift
+//  ColorSpace.swift
 //  amplience-sdk-ios
 //
 //  Created by Dylan McKee on 18/05/2022.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ColourSpace: String {
+enum ColorSpace: String {
     case RGB = "rgb"
     case RGBA = "rgba"
     case SRGB = "srgb"
