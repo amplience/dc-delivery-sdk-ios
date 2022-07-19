@@ -32,6 +32,7 @@
 		2DE2B652285C92C40076002D /* MultiContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE2B651285C92C40076002D /* MultiContent.swift */; };
 		2DE2B655285C9F240076002D /* SlidesCarouselTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE2B653285C9F240076002D /* SlidesCarouselTableViewCell.swift */; };
 		2DE2B656285C9F240076002D /* SlidesCarouselTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DE2B654285C9F240076002D /* SlidesCarouselTableViewCell.xib */; };
+		2DF41C8728869DA600E2642B /* amplience_sdk_ios_fullUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF41C8628869DA600E2642B /* amplience_sdk_ios_fullUnitTests.swift */; };
 		B08C2ED6283FA2330000B1AE /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08C2ED5283FA2330000B1AE /* MenuTableViewController.swift */; };
 		B08C2ED9283FA36F0000B1AE /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08C2ED8283FA36F0000B1AE /* MenuTableViewCell.swift */; };
 		B08C2EDB283FA4040000B1AE /* BannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08C2EDA283FA4040000B1AE /* BannerViewController.swift */; };
@@ -45,6 +46,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = 2DE141F0282AF30800AD741E;
 			remoteInfo = "amplience-sdk-ios";
+		};
+		2DF41C8828869DA600E2642B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2DE141C7282AF2F000AD741E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2DE141CE282AF2F000AD741E;
+			remoteInfo = "amplience-sdk-ios-full";
 		};
 		B075B486284FF0CB00930313 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -84,6 +92,8 @@
 		2DE2B651285C92C40076002D /* MultiContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiContent.swift; sourceTree = "<group>"; };
 		2DE2B653285C9F240076002D /* SlidesCarouselTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidesCarouselTableViewCell.swift; sourceTree = "<group>"; };
 		2DE2B654285C9F240076002D /* SlidesCarouselTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlidesCarouselTableViewCell.xib; sourceTree = "<group>"; };
+		2DF41C8428869DA600E2642B /* amplience-sdk-ios-fullUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "amplience-sdk-ios-fullUnitTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DF41C8628869DA600E2642B /* amplience_sdk_ios_fullUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = amplience_sdk_ios_fullUnitTests.swift; sourceTree = "<group>"; };
 		B08C2ED5283FA2330000B1AE /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		B08C2ED8283FA36F0000B1AE /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		B08C2EDA283FA4040000B1AE /* BannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +102,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		2DE141CC282AF2F000AD741E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DF41C8128869DA600E2642B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -152,6 +169,7 @@
 			children = (
 				2DE141FA282AF30800AD741E /* amplience-sdk-ios.xcodeproj */,
 				2DE141D1282AF2F000AD741E /* amplience-sdk-ios-full */,
+				2DF41C8528869DA600E2642B /* amplience-sdk-ios-fullUnitTests */,
 				2DE141D0282AF2F000AD741E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -160,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				2DE141CF282AF2F000AD741E /* amplience-sdk-ios-full.app */,
+				2DF41C8428869DA600E2642B /* amplience-sdk-ios-fullUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -195,6 +214,14 @@
 				2DE2B654285C9F240076002D /* SlidesCarouselTableViewCell.xib */,
 			);
 			path = SlidesCarouselTableViewCell;
+			sourceTree = "<group>";
+		};
+		2DF41C8528869DA600E2642B /* amplience-sdk-ios-fullUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				2DF41C8628869DA600E2642B /* amplience_sdk_ios_fullUnitTests.swift */,
+			);
+			path = "amplience-sdk-ios-fullUnitTests";
 			sourceTree = "<group>";
 		};
 		B08C2EDC283FA4080000B1AE /* Main Menu */ = {
@@ -256,6 +283,24 @@
 			productReference = 2DE141CF282AF2F000AD741E /* amplience-sdk-ios-full.app */;
 			productType = "com.apple.product-type.application";
 		};
+		2DF41C8328869DA600E2642B /* amplience-sdk-ios-fullUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DF41C8C28869DA600E2642B /* Build configuration list for PBXNativeTarget "amplience-sdk-ios-fullUnitTests" */;
+			buildPhases = (
+				2DF41C8028869DA600E2642B /* Sources */,
+				2DF41C8128869DA600E2642B /* Frameworks */,
+				2DF41C8228869DA600E2642B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2DF41C8928869DA600E2642B /* PBXTargetDependency */,
+			);
+			name = "amplience-sdk-ios-fullUnitTests";
+			productName = "amplience-sdk-ios-fullUnitTests";
+			productReference = 2DF41C8428869DA600E2642B /* amplience-sdk-ios-fullUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -268,6 +313,10 @@
 				TargetAttributes = {
 					2DE141CE282AF2F000AD741E = {
 						CreatedOnToolsVersion = 13.3;
+					};
+					2DF41C8328869DA600E2642B = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = 2DE141CE282AF2F000AD741E;
 					};
 				};
 			};
@@ -291,6 +340,7 @@
 			projectRoot = "";
 			targets = (
 				2DE141CE282AF2F000AD741E /* amplience-sdk-ios-full */,
+				2DF41C8328869DA600E2642B /* amplience-sdk-ios-fullUnitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -319,6 +369,13 @@
 				2DE2B656285C9F240076002D /* SlidesCarouselTableViewCell.xib in Resources */,
 				2DE141DA282AF2F000AD741E /* Main.storyboard in Resources */,
 				2D6FC18A285A7D34004C861C /* SlideTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DF41C8228869DA600E2642B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,9 +409,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2DF41C8028869DA600E2642B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DF41C8728869DA600E2642B /* amplience_sdk_ios_fullUnitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		2DF41C8928869DA600E2642B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2DE141CE282AF2F000AD741E /* amplience-sdk-ios-full */;
+			targetProxy = 2DF41C8828869DA600E2642B /* PBXContainerItemProxy */;
+		};
 		B075B487284FF0CB00930313 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Amplience;
@@ -552,6 +622,42 @@
 			};
 			name = Release;
 		};
+		2DF41C8A28869DA600E2642B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RA4XCDZCJ8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nebula.amplience-sdk-ios-fullUnitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/amplience-sdk-ios-full.app/amplience-sdk-ios-full";
+			};
+			name = Debug;
+		};
+		2DF41C8B28869DA600E2642B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RA4XCDZCJ8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nebula.amplience-sdk-ios-fullUnitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/amplience-sdk-ios-full.app/amplience-sdk-ios-full";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -569,6 +675,15 @@
 			buildConfigurations = (
 				2DE141E4282AF2F100AD741E /* Debug */,
 				2DE141E5282AF2F100AD741E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DF41C8C28869DA600E2642B /* Build configuration list for PBXNativeTarget "amplience-sdk-ios-fullUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DF41C8A28869DA600E2642B /* Debug */,
+				2DF41C8B28869DA600E2642B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

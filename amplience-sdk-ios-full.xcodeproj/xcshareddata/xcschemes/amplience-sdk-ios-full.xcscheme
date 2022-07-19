@@ -28,6 +28,16 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2DF41C8328869DA600E2642B"
+               BuildableName = "amplience-sdk-ios-fullUnitTests.xctest"
+               BlueprintName = "amplience-sdk-ios-fullUnitTests"
+               ReferencedContainer = "container:amplience-sdk-ios-full.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
