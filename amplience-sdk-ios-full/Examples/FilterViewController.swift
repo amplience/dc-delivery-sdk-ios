@@ -94,7 +94,7 @@ class FilterViewController: UIViewController {
                     self?.tableView.reloadData()
                 }
             } else {
-                print(error?.localizedDescription)
+                print(error?.localizedDescription ?? "No error description")
             }
         }
     }
