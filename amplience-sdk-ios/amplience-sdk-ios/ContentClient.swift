@@ -27,10 +27,10 @@ public class ContentClient {
     private init() {}
 
     /**
-     * [hub]
-     * The current conent hub name.
+     * [configuration]
+     * The current conent configuration
      */
-    public var hub: String?
+    public var configuration: Configuration!
 
     /**
      * [isFresh] - switch between fresh or cached environments
@@ -38,25 +38,24 @@ public class ContentClient {
      *
      * @throws RuntimeException if you have not provided a freshApiKey in the [AmplienceManager.initialise] method
      */
-    public var isFresh: Bool = false
 
     public var freshApiKey: String?
 
     private var generateBaseUrl: String {
         get {
-            return "https://\(hub!).cdn.content.amplience.net/"
+            return "https://\(configuration.hub).cdn.content.amplience.net/"
         }
     }
 
     private var generateFreshBaseUrl: String {
         get {
-            return "https://\(hub!).fresh.content.amplience.net/"
+            return "https://\(configuration.hub).fresh.content.amplience.net/"
         }
     }
 
     private var currentBaseUrl: String {
         get {
-            if isFresh {
+            if configuration.isFresh {
                 return generateFreshBaseUrl
             } else {
                 return generateBaseUrl
