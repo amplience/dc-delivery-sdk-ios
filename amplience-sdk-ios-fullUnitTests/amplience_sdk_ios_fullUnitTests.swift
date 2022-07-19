@@ -27,7 +27,7 @@ class amplience_sdk_ios_fullUnitTests: XCTestCase {
 
     func testGetVideoURL() throws {
         let testVideoItem = AmplienceVideo(dict: ["defaultHost": "cdn.media.amplience.net", "id": "a6879dc9-067f-4132-942e-0c7a10320f81", "endpoint": "ampproduct", "name": "ski-collection"])
-        let testVideoItemURL = "https://cdn.media.amplience.net/v/ampproduct/ski-collection/mp4_720p"
+        let testVideoItemURL = "https://cdn.media.amplience.net/v/ampproduct/ski-collection/mp4_480p"
         assert(testVideoItemURL == testVideoItem.getVideoUrl())
     }
 
