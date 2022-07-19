@@ -18,12 +18,10 @@ public typealias PagedResponseCompletion = (FilterContentResponse?, Error?) -> (
 
 public class ContentClient {
 
-    /**
-     * [shared]
-     * Get the current instance of the [AmplienceManager].
-     */
-    public static let shared = ContentClient()
-
+    public required init(configuration: Configuration) {
+        self.configuration = configuration
+    }
+    
     private init() {}
 
     /**
@@ -31,6 +29,12 @@ public class ContentClient {
      * The current conent configuration
      */
     public var configuration: Configuration!
+    
+    /**
+     * [shared]
+     * Get the current instance of the [AmplienceManager].
+     */
+    public static let getInstance = ContentClient()
 
     /**
      * [isFresh] - switch between fresh or cached environments

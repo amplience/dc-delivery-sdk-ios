@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
 
         // Start the Amplience manager and set the hub name...
-        ContentClient.shared.configuration = Configuration(hub: "ampproduct-doc", isFresh: false)
+        ContentClient.getInstance.configuration = Configuration(hub: "ampproduct-doc", isFresh: false)
 
         return true
     }
