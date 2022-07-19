@@ -30,8 +30,7 @@ platform :ios do
 
     sh("echo \"#{build_number}\" > build_number")
 
-    run_tests(project: "amplience-sdk-ios-full.xcodeproj",
-            devices: ["iPhone 13 Pro",])
+    run_tests(project: "amplience-sdk-ios-full.xcodeproj")
   end
 
 end
