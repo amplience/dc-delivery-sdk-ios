@@ -38,7 +38,7 @@ class FilterContentTableViewCell: UITableViewCell {
         rankLabel.text = "\(model.ranking ?? 0)"
         descriptionLabel.text = model.description
         
-        imageTopLabel.text = model.image?.image.name
+        imageTopLabel.text = model.image?.image?.name
         if let bg = model.image?.image {
             let url = bg.getImageUrl(builder: ImageUrlBuilder())
             ImageLoader.shared.loadImage(urlString: url, completion: { [weak self] image in

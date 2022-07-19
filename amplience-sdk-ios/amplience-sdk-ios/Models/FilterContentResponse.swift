@@ -11,3 +11,8 @@ public struct FilterContentResponse: Codable {
     public let responses: Array<ContentResponse>
     let page: PageData
 }
+
+public struct PageData: Codable {
+    let responseCount: Int
+    let nextCursor: String?
+}

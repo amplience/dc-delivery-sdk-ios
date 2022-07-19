@@ -18,19 +18,23 @@ public typealias PagedResponseCompletion = (FilterContentResponse?, Error?) -> (
 
 public class ContentClient {
 
+    public required init(configuration: Configuration) {
+        self.configuration = configuration
+    }
+    
+    private init() {}
+
+    /**
+     * [configuration]
+     * The current conent configuration
+     */
+    public var configuration: Configuration!
+    
     /**
      * [shared]
      * Get the current instance of the [AmplienceManager].
      */
-    public static let shared = ContentClient()
-
-    private init() {}
-
-    /**
-     * [hub]
-     * The current conent hub name.
-     */
-    public var hub: String?
+    public static let getInstance = ContentClient()
 
     /**
      * [isFresh] - switch between fresh or cached environments
@@ -38,25 +42,24 @@ public class ContentClient {
      *
      * @throws RuntimeException if you have not provided a freshApiKey in the [AmplienceManager.initialise] method
      */
-    public var isFresh: Bool = false
 
     public var freshApiKey: String?
 
     private var generateBaseUrl: String {
         get {
-            return "https://\(hub!).cdn.content.amplience.net/"
+            return "https://\(configuration.hub).cdn.content.amplience.net/"
         }
     }
 
     private var generateFreshBaseUrl: String {
         get {
-            return "https://\(hub!).fresh.content.amplience.net/"
+            return "https://\(configuration.hub).fresh.content.amplience.net/"
         }
     }
 
     private var currentBaseUrl: String {
         get {
-            if isFresh {
+            if configuration.isFresh {
                 return generateFreshBaseUrl
             } else {
                 return generateBaseUrl

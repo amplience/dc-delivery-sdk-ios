@@ -20,4 +20,6 @@ private class DictionaryDecoder {
 
 public struct ContentResponse: Codable {
     public let content: Dictionary<String, AnyCodable>
+    public let linkedContent: Array<Dictionary<String, AnyCodable>>?
 }
+
