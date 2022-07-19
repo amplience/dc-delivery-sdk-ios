@@ -50,7 +50,15 @@ public struct Page: Codable {
  * @property locale
  */
 public struct Parameters: Codable {
-    public var depth: String = "all"
-    public var format: String = "inlined"
+    public var depth: String = Depth.all.rawValue
+    public var format: String = Format.inlined.rawValue
     public var locale: String?
+}
+
+public enum Depth: String {
+    case all = "all"
+}
+
+public enum Format: String {
+    case inlined = "inlined"
 }
