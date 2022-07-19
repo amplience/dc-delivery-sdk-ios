@@ -16,7 +16,6 @@
 		B0262B742834E7BB00510C8F /* ContentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0262B732834E7BB00510C8F /* ContentRequest.swift */; };
 		B0262B7A2834E85400510C8F /* FilterBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0262B792834E85400510C8F /* FilterBy.swift */; };
 		B0262B7C2834E88900510C8F /* FilterContentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0262B7B2834E88900510C8F /* FilterContentRequest.swift */; };
-		B0262B802834E8CE00510C8F /* PageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0262B7F2834E8CE00510C8F /* PageData.swift */; };
 		B0262B822834E8F800510C8F /* FilterContentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0262B812834E8F800510C8F /* FilterContentResponse.swift */; };
 		B0262B842834E91900510C8F /* SortBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0262B832834E91900510C8F /* SortBy.swift */; };
 		B0262B872834E9B100510C8F /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0262B862834E9B100510C8F /* Blur.swift */; };
@@ -57,7 +56,6 @@
 		B0262B732834E7BB00510C8F /* ContentRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentRequest.swift; sourceTree = "<group>"; };
 		B0262B792834E85400510C8F /* FilterBy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterBy.swift; sourceTree = "<group>"; };
 		B0262B7B2834E88900510C8F /* FilterContentRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterContentRequest.swift; sourceTree = "<group>"; };
-		B0262B7F2834E8CE00510C8F /* PageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageData.swift; sourceTree = "<group>"; };
 		B0262B812834E8F800510C8F /* FilterContentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterContentResponse.swift; sourceTree = "<group>"; };
 		B0262B832834E91900510C8F /* SortBy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortBy.swift; sourceTree = "<group>"; };
 		B0262B862834E9B100510C8F /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
@@ -144,7 +142,6 @@
 				B0262B732834E7BB00510C8F /* ContentRequest.swift */,
 				B0262B792834E85400510C8F /* FilterBy.swift */,
 				B0262B7B2834E88900510C8F /* FilterContentRequest.swift */,
-				B0262B7F2834E8CE00510C8F /* PageData.swift */,
 				B0262B812834E8F800510C8F /* FilterContentResponse.swift */,
 				B0262B832834E91900510C8F /* SortBy.swift */,
 				B08C2ED3283FA0250000B1AE /* AnyCodable.swift */,
@@ -287,7 +284,6 @@
 				B0262B952834EE3A00510C8F /* FormatQuality.swift in Sources */,
 				B0262B9B2835304600510C8F /* ScaleFit.swift in Sources */,
 				B0262B9728352E7E00510C8F /* ImageUrlBuilder.swift in Sources */,
-				B0262B802834E8CE00510C8F /* PageData.swift in Sources */,
 				B0262B9F2835315C00510C8F /* Unsharp.swift in Sources */,
 				B08C2EE1283FADBF0000B1AE /* AmplienceVideo.swift in Sources */,
 				B08C2EC7283F8BE10000B1AE /* ImageLayer.swift in Sources */,
