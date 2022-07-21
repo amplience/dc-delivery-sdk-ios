@@ -1,4 +1,4 @@
-name: Fastlane
+name: Build and test
 
 on:
   push:
