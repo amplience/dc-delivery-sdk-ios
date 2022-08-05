@@ -55,7 +55,6 @@ class MultiContentViewController: UIViewController {
         tableView.register(UINib(nibName: videoCellID, bundle: nil), forCellReuseIdentifier: videoCellID)
     }
     
-
 }
 
 extension MultiContentViewController: UITableViewDelegate {

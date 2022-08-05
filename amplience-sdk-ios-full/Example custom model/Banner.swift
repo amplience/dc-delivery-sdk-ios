@@ -16,10 +16,11 @@ struct Banner: Codable {
     let callToActionUrl: String?
     let link: Link?
 
-    private enum CodingKeys : String, CodingKey {
-      case background, headline, strapline, callToActionText = "calltoactiontext", callToActionUrl = "calltoactionurl", link
+    private enum CodingKeys: String, CodingKey {
+        case background, headline, strapline, link
+        case callToActionText = "calltoactiontext", callToActionUrl = "calltoactionurl"
     }
-    
+
     init(dict: [String: AnyCodable]) {
         headline = dict[CodingKeys.headline.rawValue]!.value as? String
         strapline = dict[CodingKeys.strapline.rawValue]!.value as? String
@@ -32,7 +33,7 @@ struct Banner: Codable {
             link = nil
         }
     }
-    
+
     init(dict: [String: Any]) {
         headline = dict[CodingKeys.headline.rawValue] as? String
         strapline = dict[CodingKeys.strapline.rawValue] as? String
@@ -50,11 +51,11 @@ struct Banner: Codable {
 struct Link: Codable {
     let url: String?
     let title: String?
-    
-    private enum CodingKeys : String, CodingKey {
-      case title, url
+
+    private enum CodingKeys: String, CodingKey {
+        case title, url
     }
-    
+
     init(dict: [String: Any]) {
         title = dict[CodingKeys.title.rawValue] as? String
         url = dict[CodingKeys.url.rawValue] as? String
@@ -64,11 +65,11 @@ struct Link: Codable {
 struct Background: Codable {
     let alt: String?
     let image: AmplienceImage?
-    
-    private enum CodingKeys : String, CodingKey {
-      case alt, image
+
+    private enum CodingKeys: String, CodingKey {
+        case alt, image
     }
-    
+
     init(dict: [String: Any]) {
         alt = dict[CodingKeys.alt.rawValue] as? String
         if let imageDict = dict[CodingKeys.image.rawValue] as? [String: Any] {
@@ -76,6 +77,6 @@ struct Background: Codable {
         } else {
             image = AmplienceImage(dict: dict)
         }
-       
+
     }
 }

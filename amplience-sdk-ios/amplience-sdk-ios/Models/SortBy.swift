@@ -8,8 +8,8 @@
 import Foundation
 
 public enum Order: String, Codable {
-    case ASC = "ASC"
-    case DESC = "DESC"
+    case ASC
+    case DESC
 }
 
 /**

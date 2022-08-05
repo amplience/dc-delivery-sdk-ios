@@ -9,18 +9,18 @@ import Foundation
 
 class ImageLayer: Layer {
     var src: String
-    var width: Int? = nil
-    var height: Int? = nil
-    var topPx: Int? = nil
-    var topPercent: Int? = nil
-    var leftPx: Int? = nil
-    var leftPercent: Int? = nil
-    var bottomPx: Int? = nil
-    var bottomPercent: Int? = nil
-    var rightPx: Int? = nil
-    var rightPercent: Int? = nil
-    var anchor: Anchor? = nil
-    var opacity: Int? = nil
+    var width: Int?
+    var height: Int?
+    var topPx: Int?
+    var topPercent: Int?
+    var leftPx: Int?
+    var leftPercent: Int?
+    var bottomPx: Int?
+    var bottomPercent: Int?
+    var rightPx: Int?
+    var rightPercent: Int?
+    var anchor: Anchor?
+    var opacity: Int?
 
     init(src: String) {
       self.src = src
@@ -31,7 +31,7 @@ class ImageLayer: Layer {
         var firstQuery = true
 
         func addQuery(query: String) {
-            if (firstQuery) {
+            if firstQuery {
                 builder.append("?")
                 firstQuery = false
             } else {

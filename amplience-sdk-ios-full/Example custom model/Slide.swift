@@ -12,11 +12,11 @@ struct Slide: Codable {
     let headline: String?
     let subheading: String?
     let imageItem: AmplienceImage
-    
-    private enum CodingKeys : String, CodingKey {
-      case imageItem, headline, subheading
+
+    private enum CodingKeys: String, CodingKey {
+        case imageItem, headline, subheading
     }
-    
+
     init(dict: [String: Any]) {
         headline = dict[CodingKeys.headline.rawValue] as? String
         subheading = dict[CodingKeys.subheading.rawValue] as? String

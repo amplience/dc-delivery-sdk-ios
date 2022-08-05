@@ -42,7 +42,7 @@ public struct AmplienceVideo: Codable {
      */
     public func getVideoThumbnailUrl(builder: ImageUrlBuilder, thumbName: String? = nil) -> String {
         var string = "https://\(defaultHost)/v/\(endpoint)/\(name)"
-        if (thumbName != nil) {
+        if thumbName != nil {
             string += "/thumbs/\(thumbName!)"
         }
         string += builder.build()

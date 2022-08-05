@@ -8,6 +8,6 @@
 import Foundation
 
 public struct ListContentRequest: Codable {
-    let requests: Array<ContentRequest>
+    let requests: [ContentRequest]
     var parameters = Parameters()
 }
