@@ -46,7 +46,7 @@ public enum NetworkingError: Error, Equatable {
         case .serverError, .temporaryServerError, .decodingFailed:
             return "we're having temporary server issues, please try again later"
         case .badRequest:
-            return "something is wrong with your request, please contact an administrator"
+            return "bad request"
         case .networkUnavailable:
             return "you're not connected to the internet"
         case .unauthorised:
