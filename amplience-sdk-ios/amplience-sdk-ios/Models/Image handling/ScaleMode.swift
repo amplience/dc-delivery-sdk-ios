@@ -13,19 +13,19 @@ class ScaleMode {
     }
 }
 
-class CropToFit : ScaleMode  { override func toString() -> String { return "c" } }
-class Stretch : ScaleMode  { override func toString() -> String { return "s" } }
-class TopLeft : ScaleMode  { override func toString() -> String { return "tl" } }
-class TopCenter : ScaleMode  { override func toString() -> String { return "tc" } }
-class TopRight : ScaleMode  { override func toString() -> String { return "tr" } }
-class MiddleLeft : ScaleMode  { override func toString() -> String { return "ml" } }
-class MiddleCenter : ScaleMode  { override func toString() -> String { return "mc" } } // Default
-class MiddleRight : ScaleMode  { override func toString() -> String { return "mr" } }
-class BottomLeft : ScaleMode  { override func toString() -> String { return "bl" } }
-class BottomCenter : ScaleMode  { override func toString() -> String { return "bc" } }
-class BottomRight : ScaleMode  { override func toString() -> String { return "br" } }
+class CropToFit: ScaleMode { override func toString() -> String { return "c" } }
+class Stretch: ScaleMode { override func toString() -> String { return "s" } }
+class TopLeft: ScaleMode { override func toString() -> String { return "tl" } }
+class TopCenter: ScaleMode { override func toString() -> String { return "tc" } }
+class TopRight: ScaleMode { override func toString() -> String { return "tr" } }
+class MiddleLeft: ScaleMode { override func toString() -> String { return "ml" } }
+class MiddleCenter: ScaleMode { override func toString() -> String { return "mc" } } // Default
+class MiddleRight: ScaleMode { override func toString() -> String { return "mr" } }
+class BottomLeft: ScaleMode { override func toString() -> String { return "bl" } }
+class BottomCenter: ScaleMode { override func toString() -> String { return "bc" } }
+class BottomRight: ScaleMode { override func toString() -> String { return "br" } }
 
-class Clamp : ScaleMode  {
+class Clamp: ScaleMode {
     let width: Int
     let height: Int
     
@@ -37,7 +37,7 @@ class Clamp : ScaleMode  {
     override func toString() -> String { return "clamp" }
 }
 
-class AspectRatio : ScaleMode  {
+class AspectRatio: ScaleMode {
     var ratio: String
     
     init(ratio: String) {
@@ -47,7 +47,7 @@ class AspectRatio : ScaleMode  {
     override func toString() -> String { return "aspect&aspect=\(ratio)" }
 }
 
-class Edge : ScaleMode  {
+class Edge: ScaleMode {
     var type: EdgeType
     var length: Int
     init(type: EdgeType, length: Int) {
@@ -57,5 +57,3 @@ class Edge : ScaleMode  {
     override func toString() -> String { return "edge&resize.edge=\(type)&resize.edge.length=\(length)" }
     
 }
-
-
