@@ -31,6 +31,11 @@ platform :ios do
     sh("echo \"#{build_number}\" > build_number")
 
     run_tests(project: "amplience-sdk-ios-full.xcodeproj")
+
+    swiftlint(
+      mode: :lint,      # SwiftLint mode: :lint (default) or :autocorrect
+      raise_if_swiftlint_error: true,      # Allow fastlane to raise an error if swiftlint fails
+    )
   end
 
 end

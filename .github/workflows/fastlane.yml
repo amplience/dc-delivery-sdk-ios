@@ -6,6 +6,7 @@ on:
       - main
       - develop
       - run_tests
+      - swiftlint
 
 jobs:
   Build:
