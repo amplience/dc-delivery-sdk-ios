@@ -20,9 +20,12 @@ public class ContentClient {
 
     public required init(configuration: Configuration) {
         self.configuration = configuration
+        setupStagingEnvironment()
     }
     
-    private init() {}
+    private init() {
+        setupStagingEnvironment()
+    }
 
     /**
      * [configuration]
@@ -46,11 +49,25 @@ public class ContentClient {
     public var freshApiKey: String?
 
     private var generateBaseUrl: String {
-        return "https://\(configuration.hub).cdn.content.amplience.net/"
+        get {
+            if let virtualStagingEnvironmenetUrl = stagingEnvironment {
+                // Formulates the virtual staging environment URL as per: https://amplience.com/blog/preview-native-apps-with-dynamic-content-and-appetize/
+                return "https://\(virtualStagingEnvironmenetUrl)"
+            }
+            return "https://\(configuration.hub).cdn.content.amplience.net/"
+        }
     }
 
     private var generateFreshBaseUrl: String {
-        return "https://\(configuration.hub).fresh.content.amplience.net/"
+        get {
+            if let virtualStagingEnvironmenetUrl = stagingEnvironment {
+                // Formulates the virtual staging environment URL as per: https://amplience.com/blog/preview-native-apps-with-dynamic-content-and-appetize/
+                return "https://\(virtualStagingEnvironmenetUrl)"
+            }
+            
+            return "https://\(configuration.hub).fresh.content.amplience.net/"
+        }
+        return "https://\(configuration.hub).cdn.content.amplience.net/"
     }
 
     private var currentBaseUrl: String {
@@ -58,6 +75,14 @@ public class ContentClient {
             return generateFreshBaseUrl
         } else {
             return generateBaseUrl
+        }
+    }
+    
+    private var stagingEnvironment: String?
+    
+    private func setupStagingEnvironment() {
+        if let stagingEnvironmentUrl = UserDefaults.standard.string(forKey: "stagingEnvironment") {
+            stagingEnvironment = stagingEnvironmentUrl
         }
     }
 
