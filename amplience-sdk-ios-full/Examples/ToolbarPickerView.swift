@@ -11,9 +11,9 @@ class ToolbarPickerView: UIPickerView {
     
     public private(set) var toolbar: UIToolbar?
     
-    public var doneButtonTappedHandler: ((Int, String, Any)->Void)?
-    public var cancelButtonTappedHandler: (()->Void)?
-    public var selectedIndexChangedHandler: ((Int, String, Any)->Void)?
+    public var doneButtonTappedHandler: ((Int, String, Any) -> Void)?
+    public var cancelButtonTappedHandler: (() -> Void)?
+    public var selectedIndexChangedHandler: ((Int, String, Any) -> Void)?
     
     private var elements = [(String, Any)]()
     private var selectedElementIndex: Int = 0

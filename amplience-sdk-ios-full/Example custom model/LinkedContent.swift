@@ -12,12 +12,12 @@ struct LinkedContent: Codable {
     let meta: LinkedContentMeta?
     let altText: String?
     let image: AmplienceImage?
-    
-    private enum CodingKeys : String, CodingKey {
+
+    private enum CodingKeys: String, CodingKey {
         case altText, image
         case meta = "_meta"
     }
-    
+
     init(dict: [String: AnyCodable]) {
         altText = dict[CodingKeys.altText.rawValue]?.value  as? String
         if let metaDict = dict[CodingKeys.meta.rawValue]?.value as? [String: Any] {
@@ -37,11 +37,11 @@ struct LinkedContentMeta: Codable {
     let name: String?
     let schema: String?
     let deliveryId: String?
-    
-    private enum CodingKeys : String, CodingKey {
+
+    private enum CodingKeys: String, CodingKey {
         case name, schema, deliveryId
     }
-    
+
     init(dict: [String: Any]) {
         name = dict[CodingKeys.name.rawValue] as? String
         schema = dict[CodingKeys.schema.rawValue] as? String

@@ -7,48 +7,47 @@
 
 import Foundation
 
-
 public class ImageUrlBuilder {
-    private var width: Int? = nil
-    private var height: Int? = nil
-    private var maxWidth: Int? = nil
-    private var maxHeight: Int? = nil
-    private var quality: Int? = nil
-    private var defaultQuality: Bool? = nil
-    private var scaleMode: ScaleMode? = nil
-    private var scaleFit: ScaleFit? = nil
-    private var resizeAlgorithm: ResizeAlgorithm? = nil
-    private var upscale: Upscale? = nil
-    private var format: ContentFormat? = nil
-    private var autoFormat: Bool? = nil
-    private var formatQuality: FormatQuality? = nil
-    private var crop: Crop? = nil
-    private var edgeCrop: EdgeCrop? = nil
-    private var preCrop: Crop? = nil
-    private var preEdgeCrop: EdgeCrop? = nil
-    private var rotateDegrees: Int? = nil
-    private var rgb: (r: Int, g: Int, b: Int)? = nil
-    private var preRotate: Bool? = nil
+    private var width: Int?
+    private var height: Int?
+    private var maxWidth: Int?
+    private var maxHeight: Int?
+    private var quality: Int?
+    private var defaultQuality: Bool?
+    private var scaleMode: ScaleMode?
+    private var scaleFit: ScaleFit?
+    private var resizeAlgorithm: ResizeAlgorithm?
+    private var upscale: Upscale?
+    private var format: ContentFormat?
+    private var autoFormat: Bool?
+    private var formatQuality: FormatQuality?
+    private var crop: Crop?
+    private var edgeCrop: EdgeCrop?
+    private var preCrop: Crop?
+    private var preEdgeCrop: EdgeCrop?
+    private var rotateDegrees: Int?
+    private var rgb: (r: Int, g: Int, b: Int)?
+    private var preRotate: Bool?
     private var flipH: Bool = false
     private var flipV: Bool = false
-    private var dpi: Int? = nil
-    private var dpiFilter: DpiFilter? = nil
+    private var dpi: Int?
+    private var dpiFilter: DpiFilter?
     private var strip: Bool = false
     private var chromaSubsampling: Bool = true
-    private var colorSpace: ColorSpace? = nil
-    private var unsharp: Unsharp? = nil
-    private var compositeMode: CompositeMode? = nil
-    private var backgroundRgb: (r: Int, g: Int, b: Int)? = nil
+    private var colorSpace: ColorSpace?
+    private var unsharp: Unsharp?
+    private var compositeMode: CompositeMode?
+    private var backgroundRgb: (r: Int, g: Int, b: Int)?
     private var indexed: Bool = false
-    private var paletteSize: Int? = nil
+    private var paletteSize: Int?
     private var dithered: Bool = true
-    private var blur: Blur? = nil
-    private var reduceNoise: Int? = nil
-    private var gamma: Float? = nil
-    private var hue: Int? = nil
-    private var saturation: Int? = nil
-    private var brightness: Int? = nil
-    private var layers: Array<Layer> = Array()
+    private var blur: Blur?
+    private var reduceNoise: Int?
+    private var gamma: Float?
+    private var hue: Int?
+    private var saturation: Int?
+    private var brightness: Int?
+    private var layers: [Layer] = []
     
     public init() {}
     
@@ -243,15 +242,13 @@ public class ImageUrlBuilder {
         tl.textAlign = textAlign
         layers.append(tl)
     }
-    
-    
+
     func build() -> String {
         var builder = String()
         var firstQuery = true
-        
-        
+
         func addQuery(query: String) {
-            if (firstQuery) {
+            if firstQuery {
                 builder.append("?")
                 firstQuery = false
             } else {
@@ -260,130 +257,128 @@ public class ImageUrlBuilder {
             builder.append(query)
         }
         
-        if (width != nil) {
+        if width != nil {
             addQuery(query: "w=\(width!)")
         }
-        if (height != nil) {
+        if height != nil {
             addQuery(query: "h=\(height!)")
         }
-        if (maxWidth != nil) {
+        if maxWidth != nil {
             addQuery(query: "maxW=\(maxWidth!)")
         }
-        if (maxHeight != nil) {
+        if maxHeight != nil {
             addQuery(query: "maxH=\(maxHeight!)")
         }
-        if (scaleMode != nil) {
+        if scaleMode != nil {
             addQuery(query: "sm=\(scaleMode!)")
         }
-        if (scaleFit != nil) {
+        if scaleFit != nil {
             addQuery(query: "scalefit=\(scaleFit!)")
         }
-        if (resizeAlgorithm != nil) {
+        if resizeAlgorithm != nil {
             addQuery(query: "filter=\(resizeAlgorithm!)")
         }
-        if (upscale != nil)  {
+        if upscale != nil {
             addQuery(query: "upscale=\(upscale!)")
         }
-        if (crop != nil){
+        if crop != nil {
             addQuery(query: "crop=\(crop!.x),\(crop!.y),\(crop!.w),\(crop!.h)")
         }
-        if (edgeCrop != nil) {
+        if edgeCrop != nil {
             addQuery(query: "ecrop=\(edgeCrop!.left),\(edgeCrop!.top),\(edgeCrop!.right),\(edgeCrop!.bottom)")
             
         }
         
-        if (preCrop != nil) {
+        if preCrop != nil {
             addQuery(query: "pcrop=\(preCrop!.x),\(preCrop!.y),\(preCrop!.w),\(preCrop!.h)")
-            
         }
         
-        if (preEdgeCrop != nil) {
+        if preEdgeCrop != nil {
             addQuery(query: "pecrop=\(preEdgeCrop!.left),\(preEdgeCrop!.top),\(preEdgeCrop!.right),\(preEdgeCrop!.bottom)")
         }
-        
-        
-        if (rotateDegrees != nil) {
-            if (preRotate == true) {
+
+        if rotateDegrees != nil {
+            if preRotate == true {
                 addQuery(query: "protate=\(rotateDegrees!)")
             } else {
                 addQuery(query: "rotate=\(rotateDegrees!)")
             }
-            if (rgb != nil) {
+            if rgb != nil {
                 builder.append(",rgb(\(rgb!.r),\(rgb!.g),\(rgb!.b)")
             }
         }
         
-        if (flipH) {
+        if flipH {
             addQuery(query: "fliph=true")
         }
-        if (flipV) {
+        if flipV {
             addQuery(query: "flipv=true")
         }
-        if (format != nil) {
+        if format != nil {
             addQuery(query: "fmt=\(format!)")
         }
-        if (formatQuality != nil) {
+        if formatQuality != nil {
             addQuery(query: formatQuality!.toString())
         }
         
-        if (dpi != nil) {
+        if dpi != nil {
             addQuery(query: "dpi=\(dpi!)")
-            if (dpiFilter != nil) {
+            if dpiFilter != nil {
                 addQuery(query: "dpiFilter=\(dpiFilter!)")
             }
         }
         
-        if (strip) {
+        if strip {
             addQuery(query: "strip=true")
         }
         
-        if (!chromaSubsampling) {
+        if !chromaSubsampling {
             addQuery(query: "fmt.jpeg.chroma=1,1,1")
         }
-        if (colorSpace != nil) {
+        if colorSpace != nil {
             addQuery(query: "cs=\(colorSpace!)")
         }
-        if (unsharp != nil) {
+        if unsharp != nil {
             addQuery(query: "unsharp=\(unsharp!.radius),\(unsharp!.sigma),\(unsharp!.amount),\(unsharp!.threshold)")
         }
         
-        if (compositeMode != nil) {
+        if compositeMode != nil {
             addQuery(query: "cm=\(compositeMode!)")
         }
         
-        if (backgroundRgb != nil) {
+        if backgroundRgb != nil {
             addQuery(query: "bg=rgb(\(backgroundRgb!.r),\(backgroundRgb!.g),\(backgroundRgb!.b))")
             
         }
         
-        if (indexed) {
+        if indexed {
             addQuery(query: "fmt.png.indexed=true")
-            if (paletteSize != nil) {
+            if paletteSize != nil {
                 addQuery(query: "fmt.png.palettesize=\(paletteSize!)")
             }
         }
         
-        if (!dithered) {
+        if !dithered {
             addQuery(query: "fmt.png.dither=false")
         }
         
-        if (blur != nil) {
+        if blur != nil {
             addQuery(query: "blur=\(blur!.radius),\(blur!.sigma)")
         }
         
-        if (reduceNoise != nil) {
+        if reduceNoise != nil {
             addQuery(query: "noiser=\(reduceNoise!)")
         }
         
-        if (gamma != nil) {
+        if gamma != nil {
             addQuery(query: "gamma=\(gamma!)")
         }
         
-        if (hue != nil) { addQuery(query: "hue=\(hue!)")}
+        if hue != nil { addQuery(query: "hue=\(hue!)")}
         
-        if (saturation != nil) { addQuery(query: "sat=\(saturation!)") }
+        if saturation != nil { addQuery(query: "sat=\(saturation!)") }
         
-        if (brightness != nil) {
+        if brightness != nil {
             addQuery(query: "bri=\(brightness!)")
         }
 

@@ -68,5 +68,4 @@ class MenuTableViewController: UITableViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
-    
 }
