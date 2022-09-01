@@ -20,7 +20,7 @@ public enum NetworkingError: Error, Equatable {
     case unauthorised
     case notAnError
     
-    init(from statusCode: Int){
+    init(from statusCode: Int) {
         switch statusCode {
         case -1022 ... -999:
             self = .networkUnavailable
@@ -61,8 +61,7 @@ public enum NetworkingError: Error, Equatable {
             return "oops"
         }
     }
-    
-    
+
     public func code() -> Int {
         let code: Int
         switch self {
@@ -93,8 +92,7 @@ public enum NetworkingError: Error, Equatable {
     
     static public func == (lhs: NetworkingError, rhs: NetworkingError) -> Bool {
         switch (lhs, rhs) {
-        case (.generic, .generic), (.badRequest, .badRequest),(.networkUnavailable, .networkUnavailable),
-             (.notFound, .notFound), (.invalidResponse, .invalidResponse), (.serverError, .serverError), (.unauthorised, .unauthorised):
+        case (.generic, .generic), (.badRequest, .badRequest), (.networkUnavailable, .networkUnavailable), (.notFound, .notFound), (.invalidResponse, .invalidResponse), (.serverError, .serverError), (.unauthorised, .unauthorised):
             return true
         default:
             return false
@@ -102,4 +100,3 @@ public enum NetworkingError: Error, Equatable {
     }
     
 }
-

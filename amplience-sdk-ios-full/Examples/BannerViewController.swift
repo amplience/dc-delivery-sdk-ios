@@ -38,7 +38,6 @@ class BannerViewController: UIViewController {
         }
     }
     
-    
     private func loadBanner() {
         ContentClient.getInstance.getContentByKey(key: "example-key") { [weak self] response, error in
             guard let self = self else { return }

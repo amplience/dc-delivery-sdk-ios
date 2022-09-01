@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D4B1CD3289D6D73007B3CA2 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 2D4B1CD2289D6D73007B3CA2 /* .swiftlint.yml */; };
 		2D6FC186285A7C31004C861C /* SlidesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6FC185285A7C31004C861C /* SlidesViewController.swift */; };
 		2D6FC189285A7D34004C861C /* SlideTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6FC187285A7D34004C861C /* SlideTableViewCell.swift */; };
 		2D6FC18A285A7D34004C861C /* SlideTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D6FC188285A7D34004C861C /* SlideTableViewCell.xib */; };
@@ -34,10 +35,12 @@
 		2DE2B656285C9F240076002D /* SlidesCarouselTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DE2B654285C9F240076002D /* SlidesCarouselTableViewCell.xib */; };
 		2DF41C5E2885C76E00E2642B /* LinkedContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF41C5D2885C76E00E2642B /* LinkedContent.swift */; };
 		2DF41C8728869DA600E2642B /* amplience_sdk_ios_fullUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF41C8628869DA600E2642B /* amplience_sdk_ios_fullUnitTests.swift */; };
+		84D969BC47E2D4D655B9E919 /* Pods_amplience_sdk_ios_full.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E879C05278D8F5595BA42B76 /* Pods_amplience_sdk_ios_full.framework */; };
 		B08C2ED6283FA2330000B1AE /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08C2ED5283FA2330000B1AE /* MenuTableViewController.swift */; };
 		B08C2ED9283FA36F0000B1AE /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08C2ED8283FA36F0000B1AE /* MenuTableViewCell.swift */; };
 		B08C2EDB283FA4040000B1AE /* BannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08C2EDA283FA4040000B1AE /* BannerViewController.swift */; };
 		B08C2EE4283FBDB60000B1AE /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08C2EE3283FBDB60000B1AE /* Banner.swift */; };
+		E4163D502E16F99F18F165A4 /* Pods_amplience_sdk_ios_fullUnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 325B41299C4319BB52C1D5EC /* Pods_amplience_sdk_ios_fullUnitTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +68,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1063BCD4E653AA7670627301 /* Pods-amplience-sdk-ios-full.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-amplience-sdk-ios-full.debug.xcconfig"; path = "Target Support Files/Pods-amplience-sdk-ios-full/Pods-amplience-sdk-ios-full.debug.xcconfig"; sourceTree = "<group>"; };
+		2D4B1CD2289D6D73007B3CA2 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		2D6FC185285A7C31004C861C /* SlidesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidesViewController.swift; sourceTree = "<group>"; };
 		2D6FC187285A7D34004C861C /* SlideTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideTableViewCell.swift; sourceTree = "<group>"; };
 		2D6FC188285A7D34004C861C /* SlideTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlideTableViewCell.xib; sourceTree = "<group>"; };
@@ -96,10 +101,15 @@
 		2DF41C5D2885C76E00E2642B /* LinkedContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedContent.swift; sourceTree = "<group>"; };
 		2DF41C8428869DA600E2642B /* amplience-sdk-ios-fullUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "amplience-sdk-ios-fullUnitTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DF41C8628869DA600E2642B /* amplience_sdk_ios_fullUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = amplience_sdk_ios_fullUnitTests.swift; sourceTree = "<group>"; };
+		325B41299C4319BB52C1D5EC /* Pods_amplience_sdk_ios_fullUnitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_amplience_sdk_ios_fullUnitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		756E623BE5B9F059DDD9443C /* Pods-amplience-sdk-ios-fullUnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-amplience-sdk-ios-fullUnitTests.debug.xcconfig"; path = "Target Support Files/Pods-amplience-sdk-ios-fullUnitTests/Pods-amplience-sdk-ios-fullUnitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B08C2ED5283FA2330000B1AE /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		B08C2ED8283FA36F0000B1AE /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		B08C2EDA283FA4040000B1AE /* BannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerViewController.swift; sourceTree = "<group>"; };
 		B08C2EE3283FBDB60000B1AE /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		C312AF66168FF12A6685928B /* Pods-amplience-sdk-ios-fullUnitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-amplience-sdk-ios-fullUnitTests.release.xcconfig"; path = "Target Support Files/Pods-amplience-sdk-ios-fullUnitTests/Pods-amplience-sdk-ios-fullUnitTests.release.xcconfig"; sourceTree = "<group>"; };
+		E879C05278D8F5595BA42B76 /* Pods_amplience_sdk_ios_full.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_amplience_sdk_ios_full.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7215AA7E00682D693ABA6B5 /* Pods-amplience-sdk-ios-full.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-amplience-sdk-ios-full.release.xcconfig"; path = "Target Support Files/Pods-amplience-sdk-ios-full/Pods-amplience-sdk-ios-full.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84D969BC47E2D4D655B9E919 /* Pods_amplience_sdk_ios_full.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4163D502E16F99F18F165A4 /* Pods_amplience_sdk_ios_fullUnitTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,10 +181,13 @@
 		2DE141C6282AF2F000AD741E = {
 			isa = PBXGroup;
 			children = (
+				2D4B1CD2289D6D73007B3CA2 /* .swiftlint.yml */,
 				2DE141FA282AF30800AD741E /* amplience-sdk-ios.xcodeproj */,
 				2DE141D1282AF2F000AD741E /* amplience-sdk-ios-full */,
 				2DF41C8528869DA600E2642B /* amplience-sdk-ios-fullUnitTests */,
 				2DE141D0282AF2F000AD741E /* Products */,
+				828DA955108266CCC7F456D7 /* Pods */,
+				FFAD40EC7F80BDA3571AE113 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -226,6 +241,17 @@
 			path = "amplience-sdk-ios-fullUnitTests";
 			sourceTree = "<group>";
 		};
+		828DA955108266CCC7F456D7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1063BCD4E653AA7670627301 /* Pods-amplience-sdk-ios-full.debug.xcconfig */,
+				F7215AA7E00682D693ABA6B5 /* Pods-amplience-sdk-ios-full.release.xcconfig */,
+				756E623BE5B9F059DDD9443C /* Pods-amplience-sdk-ios-fullUnitTests.debug.xcconfig */,
+				C312AF66168FF12A6685928B /* Pods-amplience-sdk-ios-fullUnitTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B08C2EDC283FA4080000B1AE /* Main Menu */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,6 +291,15 @@
 			path = "Example custom model";
 			sourceTree = "<group>";
 		};
+		FFAD40EC7F80BDA3571AE113 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E879C05278D8F5595BA42B76 /* Pods_amplience_sdk_ios_full.framework */,
+				325B41299C4319BB52C1D5EC /* Pods_amplience_sdk_ios_fullUnitTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -272,6 +307,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2DE141E3282AF2F100AD741E /* Build configuration list for PBXNativeTarget "amplience-sdk-ios-full" */;
 			buildPhases = (
+				2D66A6FC289D592F0093C00E /* Swiftlint */,
+				785EB8F461578D16277E2C13 /* [CP] Check Pods Manifest.lock */,
 				2DE141CB282AF2F000AD741E /* Sources */,
 				2DE141CC282AF2F000AD741E /* Frameworks */,
 				2DE141CD282AF2F000AD741E /* Resources */,
@@ -290,6 +327,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2DF41C8C28869DA600E2642B /* Build configuration list for PBXNativeTarget "amplience-sdk-ios-fullUnitTests" */;
 			buildPhases = (
+				449AF82A27DE9946713438BB /* [CP] Check Pods Manifest.lock */,
 				2DF41C8028869DA600E2642B /* Sources */,
 				2DF41C8128869DA600E2642B /* Frameworks */,
 				2DF41C8228869DA600E2642B /* Resources */,
@@ -363,6 +401,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D4B1CD3289D6D73007B3CA2 /* .swiftlint.yml in Resources */,
 				2DA04BE728746F8400F6BEF5 /* ContentAuthorView.xib in Resources */,
 				2D924054286638F900AFBAF4 /* VideoTableViewCell.xib in Resources */,
 				2D799F4B285CA62100EA9932 /* SlideCollectionViewCell.xib in Resources */,
@@ -383,6 +422,71 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2D66A6FC289D592F0093C00E /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which \"${PODS_ROOT}/SwiftLint/swiftlint\" >/dev/null; then\n  \"${PODS_ROOT}/SwiftLint/swiftlint\"\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		449AF82A27DE9946713438BB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-amplience-sdk-ios-fullUnitTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		785EB8F461578D16277E2C13 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-amplience-sdk-ios-full-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2DE141CB282AF2F000AD741E /* Sources */ = {
@@ -572,6 +676,7 @@
 		};
 		2DE141E4282AF2F100AD741E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1063BCD4E653AA7670627301 /* Pods-amplience-sdk-ios-full.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -601,6 +706,7 @@
 		};
 		2DE141E5282AF2F100AD741E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7215AA7E00682D693ABA6B5 /* Pods-amplience-sdk-ios-full.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -630,6 +736,7 @@
 		};
 		2DF41C8A28869DA600E2642B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 756E623BE5B9F059DDD9443C /* Pods-amplience-sdk-ios-fullUnitTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -649,6 +756,7 @@
 		};
 		2DF41C8B28869DA600E2642B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C312AF66168FF12A6685928B /* Pods-amplience-sdk-ios-fullUnitTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;

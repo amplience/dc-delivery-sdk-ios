@@ -99,7 +99,6 @@ class FilterViewController: UIViewController {
         }
     }
     
-
 }
 
 extension FilterViewController: UITableViewDataSource {
