@@ -67,7 +67,6 @@ public class ContentClient {
             
             return "https://\(configuration.hub).fresh.content.amplience.net/"
         }
-        return "https://\(configuration.hub).cdn.content.amplience.net/"
     }
 
     private var currentBaseUrl: String {
