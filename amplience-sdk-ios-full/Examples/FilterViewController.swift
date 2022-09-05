@@ -93,8 +93,6 @@ class FilterViewController: UIViewController {
                 DispatchQueue.main.async {
                     self?.tableView.reloadData()
                 }
-            } else {
-                print(error?.localizedDescription ?? "No error description")
             }
         }
     }

@@ -61,7 +61,7 @@ class BaseRequest: NSObject {
             
             guard let httpResponse = response as? HTTPURLResponse else {
                 if let error = error as? NSError {
-                     if [502, -1001, -1003, -1004, -1009].contains(error.code) && shouldRetry {
+                    if [NetworkingError.badGateway, NetworkingError.timedOut, NetworkingError.cannotFindHost, NetworkingError.cannotConnectToHost, NetworkingError.notConnectedToInternet].map({ $0.code() }).contains(error.code) && shouldRetry {
                        self.processRequest(objectType, request: request, shouldRetry: false, completion: completion)
                        return
                    } else {
@@ -74,7 +74,7 @@ class BaseRequest: NSObject {
             }
             
             // Did the server timeout? if so, retry it.
-             if [502, -1001, -1003, -1004, -1009].contains(httpResponse.statusCode) { // bad gateway, timedout variations
+             if [NetworkingError.badGateway, NetworkingError.timedOut, NetworkingError.cannotFindHost, NetworkingError.cannotConnectToHost, NetworkingError.notConnectedToInternet].map({ $0.code() }).contains(httpResponse.statusCode) { // bad gateway, timedout variations
                 if shouldRetry {
                     self.processRequest(objectType, request: request, shouldRetry: false, completion: completion)
                     return

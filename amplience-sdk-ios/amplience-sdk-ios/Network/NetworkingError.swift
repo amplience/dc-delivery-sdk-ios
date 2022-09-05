@@ -19,9 +19,25 @@ public enum NetworkingError: Error, Equatable {
     case temporaryServerError
     case unauthorised
     case notAnError
+    case badGateway
+    case badURL
+    case timedOut
+    case cannotFindHost
+    case cannotConnectToHost
+    case notConnectedToInternet
     
     init(from statusCode: Int) {
         switch statusCode {
+        case -1000:
+            self = .badURL
+        case -1001:
+            self = .timedOut
+        case -1003:
+            self = .cannotFindHost
+        case -1004:
+            self = .cannotConnectToHost
+        case -1005:
+            self = .notConnectedToInternet
         case -1022 ... -999:
             self = .networkUnavailable
         case 400:
@@ -30,6 +46,8 @@ public enum NetworkingError: Error, Equatable {
             self = .unauthorised
         case 404:
             self = .notFound
+        case 502:
+            self = .badGateway
         case 413: // Temporary, when we fix server issues this won't be the case.
             self = .temporaryServerError
         case 500...520:
@@ -43,7 +61,7 @@ public enum NetworkingError: Error, Equatable {
     
     public func readableString() -> String {
         switch self {
-        case .serverError, .temporaryServerError, .decodingFailed:
+        case .serverError, .temporaryServerError, .decodingFailed, .badGateway:
             return "we're having temporary server issues, please try again later"
         case .badRequest:
             return "bad request"
@@ -59,6 +77,16 @@ public enum NetworkingError: Error, Equatable {
             return "an unknown error has occurred"
         case .notAnError:
             return "oops"
+        case .badURL:
+            return "we couldn't find the url"
+        case .timedOut:
+            return "the request is timed out"
+        case .cannotFindHost:
+            return "we couldn't find the host"
+        case .cannotConnectToHost:
+            return "we coudldn't connect to the host"
+        case .notConnectedToInternet:
+            return "we couldn't connect to the internet, please try again later"
         }
     }
 
@@ -85,6 +113,18 @@ public enum NetworkingError: Error, Equatable {
             code = 401
         case .notAnError:
             code = -1
+        case .badGateway:
+            code = 502
+        case .badURL:
+            code = -1000
+        case .timedOut:
+            code = -1001
+        case .cannotFindHost:
+            code = -1003
+        case .cannotConnectToHost:
+            code = -1004
+        case .notConnectedToInternet:
+            code = -1009
         }
         
         return code
