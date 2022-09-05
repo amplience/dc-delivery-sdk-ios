@@ -17,12 +17,12 @@ import Foundation
  * @property page - Pagination
  */
 public struct FilterContentRequest: Codable {
-    public let filterBy: Array<FilterBy>
+    public let filterBy: [FilterBy]
     public let sortBy: SortBy?
     public let page: Page?
     public var parameters: Parameters = Parameters()
     
-    public init(filterBy: Array<FilterBy>, sortBy: SortBy?, page: Page?) {
+    public init(filterBy: [FilterBy], sortBy: SortBy?, page: Page?) {
         self.filterBy = filterBy
         self.sortBy = sortBy
         self.page = page
@@ -56,9 +56,9 @@ public struct Parameters: Codable {
 }
 
 public enum Depth: String {
-    case all = "all"
+    case all
 }
 
 public enum Format: String {
-    case inlined = "inlined"
+    case inlined
 }

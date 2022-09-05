@@ -8,21 +8,24 @@
 import Foundation
 
 enum RequestOptions: String {
-    case all = "all"
-    case inlined = "inlined"
+    case all
+    case inlined
 }
 
-public typealias ContentResponseCompletion = (ContentResponse?, Error?) -> ()
-public typealias MultipleContentResponseCompletion = ([ContentResponse]?, Error?) -> ()
-public typealias PagedResponseCompletion = (FilterContentResponse?, Error?) -> ()
+public typealias ContentResponseCompletion = (ContentResponse?, Error?) -> Void
+public typealias MultipleContentResponseCompletion = ([ContentResponse]?, Error?) -> Void
+public typealias PagedResponseCompletion = (FilterContentResponse?, Error?) -> Void
 
 public class ContentClient {
 
     public required init(configuration: Configuration) {
         self.configuration = configuration
+        setupStagingEnvironment()
     }
     
-    private init() {}
+    private init() {
+        setupStagingEnvironment()
+    }
 
     /**
      * [configuration]
@@ -47,23 +50,38 @@ public class ContentClient {
 
     private var generateBaseUrl: String {
         get {
+            if let virtualStagingEnvironmenetUrl = stagingEnvironment {
+                // Formulates the virtual staging environment URL as per: https://amplience.com/blog/preview-native-apps-with-dynamic-content-and-appetize/
+                return "https://\(virtualStagingEnvironmenetUrl)"
+            }
             return "https://\(configuration.hub).cdn.content.amplience.net/"
         }
     }
 
     private var generateFreshBaseUrl: String {
         get {
+            if let virtualStagingEnvironmenetUrl = stagingEnvironment {
+                // Formulates the virtual staging environment URL as per: https://amplience.com/blog/preview-native-apps-with-dynamic-content-and-appetize/
+                return "https://\(virtualStagingEnvironmenetUrl)"
+            }
+            
             return "https://\(configuration.hub).fresh.content.amplience.net/"
         }
     }
 
     private var currentBaseUrl: String {
-        get {
-            if configuration.isFresh {
-                return generateFreshBaseUrl
-            } else {
-                return generateBaseUrl
-            }
+        if configuration.isFresh {
+            return generateFreshBaseUrl
+        } else {
+            return generateBaseUrl
+        }
+    }
+    
+    private var stagingEnvironment: String?
+    
+    private func setupStagingEnvironment() {
+        if let stagingEnvironmentUrl = UserDefaults.standard.string(forKey: "stagingEnvironment") {
+            stagingEnvironment = stagingEnvironmentUrl
         }
     }
 
@@ -81,8 +99,7 @@ public class ContentClient {
             "format": RequestOptions.inlined.rawValue
         ]
         let url = currentBaseUrl + "content/id/\(id)"
-        BaseRequest().GET(url: url, params: params, object: ContentResponse.self, token: freshApiKey) {
-            incidentTypes, error in
+        BaseRequest().GET(url: url, params: params, object: ContentResponse.self, token: freshApiKey) { incidentTypes, error in
             completion(incidentTypes, error)
         }
     }
@@ -101,8 +118,7 @@ public class ContentClient {
             "format": RequestOptions.inlined.rawValue
         ]
         let url = currentBaseUrl + "content/key/\(key)"
-        BaseRequest().GET(url: url, params: params, object: ContentResponse.self, token: freshApiKey) {
-            incidentTypes, error in
+        BaseRequest().GET(url: url, params: params, object: ContentResponse.self, token: freshApiKey) { incidentTypes, error in
             completion(incidentTypes, error)
         }
     }

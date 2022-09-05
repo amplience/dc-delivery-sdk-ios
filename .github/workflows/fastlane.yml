@@ -1,0 +1,44 @@
+name: Build and test
+
+on:
+  pull_request:
+    branches:
+      - main
+      - develop
+  push:
+    branches:
+      - main
+      - develop
+      - run_tests
+      - swiftlint
+
+jobs:
+  Build:
+    runs-on: macOS-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Set up Ruby 2.6
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: 2.6.x
+      - name: Bundle install
+        run: gem install bundler && bundle install
+      - name: Run Fastlane
+        run: bundle exec fastlane tests
+        env:
+          FASTLANE_DONT_STORE_PASSWORD: 1
+          FASTLANE_XCODEBUILD_SETTINGS_RETRIES: 6
+          FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT: 600
+        timeout-minutes: 30
+      - name: Upload logs on failure
+        uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+          name: xcode-logs
+          path: ~/Library/Logs/gym
+      - name: Upload logs
+        uses: actions/upload-artifact@v2
+        with:
+          name: build-log
+          path: ~/Library/Logs/gym

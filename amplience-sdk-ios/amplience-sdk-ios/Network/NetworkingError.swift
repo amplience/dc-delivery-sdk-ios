@@ -26,7 +26,7 @@ public enum NetworkingError: Error, Equatable {
     case cannotConnectToHost
     case notConnectedToInternet
     
-    init(from statusCode: Int){
+    init(from statusCode: Int) {
         switch statusCode {
         case -1000:
             self = .badURL
@@ -64,7 +64,7 @@ public enum NetworkingError: Error, Equatable {
         case .serverError, .temporaryServerError, .decodingFailed, .badGateway:
             return "we're having temporary server issues, please try again later"
         case .badRequest:
-            return "something is wrong with your request, please contact an administrator"
+            return "bad request"
         case .networkUnavailable:
             return "you're not connected to the internet"
         case .unauthorised:
@@ -89,8 +89,7 @@ public enum NetworkingError: Error, Equatable {
             return "we couldn't connect to the internet, please try again later"
         }
     }
-    
-    
+
     public func code() -> Int {
         let code: Int
         switch self {
@@ -133,8 +132,7 @@ public enum NetworkingError: Error, Equatable {
     
     static public func == (lhs: NetworkingError, rhs: NetworkingError) -> Bool {
         switch (lhs, rhs) {
-        case (.generic, .generic), (.badRequest, .badRequest),(.networkUnavailable, .networkUnavailable),
-             (.notFound, .notFound), (.invalidResponse, .invalidResponse), (.serverError, .serverError), (.unauthorised, .unauthorised):
+        case (.generic, .generic), (.badRequest, .badRequest), (.networkUnavailable, .networkUnavailable), (.notFound, .notFound), (.invalidResponse, .invalidResponse), (.serverError, .serverError), (.unauthorised, .unauthorised):
             return true
         default:
             return false
@@ -142,4 +140,3 @@ public enum NetworkingError: Error, Equatable {
     }
     
 }
-

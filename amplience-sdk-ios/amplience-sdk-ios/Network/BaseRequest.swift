@@ -9,8 +9,8 @@ import Foundation
 import UIKit
 
 class BaseRequest: NSObject {
-    typealias SuccessCompletion = (Error?) -> ()
-    typealias BaseCompletion<Object: Codable> = (Object?, Error?) -> ()
+    typealias SuccessCompletion = (Error?) -> Void
+    typealias BaseCompletion<Object: Codable> = (Object?, Error?) -> Void
     
     // This base request allows you to fetch from a URL and have it automatically process the data.
     func GET<Object: Codable>(url: String, params: [String: Any] = [:], object: Object.Type, token: String? = nil, completion: @escaping BaseCompletion<Object>) {
@@ -72,7 +72,6 @@ class BaseRequest: NSObject {
                 }
                 return
             }
-            
             
             // Did the server timeout? if so, retry it.
              if [NetworkingError.badGateway, NetworkingError.timedOut, NetworkingError.cannotFindHost, NetworkingError.cannotConnectToHost, NetworkingError.notConnectedToInternet].map({ $0.code() }).contains(httpResponse.statusCode) { // bad gateway, timedout variations

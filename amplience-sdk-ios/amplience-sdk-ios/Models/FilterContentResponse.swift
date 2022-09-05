@@ -8,7 +8,7 @@
 import Foundation
 
 public struct FilterContentResponse: Codable {
-    public let responses: Array<ContentResponse>
+    public let responses: [ContentResponse]
     let page: PageData
 }
 

@@ -110,9 +110,9 @@ extension AnyCodable: Codable {
             try container.encode(value)
         case let value as UInt64:
             try container.encode(value)
-        case let value as Array<Any?>:
+        case let value as [Any?]:
             try container.encode(value.map { AnyCodable($0) })
-        case let value as Dictionary<String, Any?>:
+        case let value as [String: Any?]:
             try container.encode(value.mapValues { AnyCodable($0) })
         case let value as Float:
             try container.encode(value)
@@ -230,7 +230,6 @@ public extension KeyedDecodingContainerProtocol {
     }
 }
 
-
 public extension KeyedEncodingContainerProtocol {
 
     mutating func encodeIfPresent(_ value: AnyCodable?, forKey key: Self.Key) throws {
@@ -242,4 +241,3 @@ public extension KeyedEncodingContainerProtocol {
         try self.encode(someValue, forKey: key)
     }
 }
-
