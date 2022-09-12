@@ -2,7 +2,6 @@
 //  MultiContentViewController.swift
 //  amplience-sdk-ios-full
 //
-//  Created by Maksym Paidych on 17.06.2022.
 //
 
 import UIKit

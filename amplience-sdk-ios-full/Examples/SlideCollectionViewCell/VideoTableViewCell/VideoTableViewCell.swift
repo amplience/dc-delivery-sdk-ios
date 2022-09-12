@@ -2,7 +2,6 @@
 //  VideoTableViewCell.swift
 //  amplience-sdk-ios-full
 //
-//  Created by Maksym Paidych on 24.06.2022.
 //
 
 import UIKit

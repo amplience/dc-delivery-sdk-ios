@@ -2,7 +2,6 @@
 //  amplience_sdk_ios_fullUnitTests.swift
 //  amplience-sdk-ios-fullUnitTests
 //
-//  Created by Maksym Paidych on 19.07.2022.
 //
 
 import XCTest

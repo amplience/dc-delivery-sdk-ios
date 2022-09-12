@@ -2,7 +2,6 @@
 //  ImageItem.swift
 //  amplience-sdk-ios-full
 //
-//  Created by Maksym Paidych on 16.06.2022.
 //
 
 import Foundation

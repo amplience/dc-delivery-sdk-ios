@@ -2,7 +2,6 @@
 //  AppDelegate.swift
 //  amplience-sdk-ios-full
 //
-//  Created by Maksym Paidych on 10.05.2022.
 //
 
 import UIKit

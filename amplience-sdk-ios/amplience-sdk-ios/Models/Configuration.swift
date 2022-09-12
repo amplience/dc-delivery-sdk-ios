@@ -2,7 +2,6 @@
 //  Configuration.swift
 //  Amplience
 //
-//  Created by Maksym Paidych on 18.07.2022.
 //
 
 import Foundation

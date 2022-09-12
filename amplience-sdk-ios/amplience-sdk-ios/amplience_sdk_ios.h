@@ -2,7 +2,6 @@
 //  amplience_sdk_ios.h
 //  amplience-sdk-ios
 //
-//  Created by Maksym Paidych on 10.05.2022.
 //
 
 #import <Foundation/Foundation.h>

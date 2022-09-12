@@ -2,7 +2,6 @@
 //  SlideTableViewCell.swift
 //  amplience-sdk-ios-full
 //
-//  Created by Maksym Paidych on 15.06.2022.
 //
 
 import UIKit

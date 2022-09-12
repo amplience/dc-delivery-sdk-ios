@@ -2,7 +2,6 @@
 //  ImageLoader.swift
 //  Amplience
 //
-//  Created by Maksym Paidych on 10.06.2022.
 //
 
 import UIKit

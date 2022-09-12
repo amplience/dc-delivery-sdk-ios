@@ -2,7 +2,6 @@
 //  LinkedContent.swift
 //  amplience-sdk-ios-full
 //
-//  Created by Maksym Paidych on 18.07.2022.
 //
 
 import Foundation

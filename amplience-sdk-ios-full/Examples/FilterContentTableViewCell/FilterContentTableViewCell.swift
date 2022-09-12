@@ -2,7 +2,6 @@
 //  FilterContentTableViewCell.swift
 //  amplience-sdk-ios-full
 //
-//  Created by Maksym Paidych on 05.07.2022.
 //
 
 import UIKit
