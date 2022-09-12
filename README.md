@@ -88,7 +88,7 @@ The format of the content object will be specific to your content types, which d
 
 ### Fetch content by delivery key
 
-Once you have [set a delivery key for a slot or content item](https://docs.amplience.net/development/delivery-keys/readme.html), the content item must be published before it can be retrieved using this SDK.
+Once you have [set a delivery key for a slot or content item](https://docs.amplience.net/development/delivery-keys/readme.html), the content item must be published with its delivery key before it can be retrieved using this method.
 
 The `getContentByKey(key: )` method accepts a callback which will resolve to the JSON of your slot or content item. If no content is found with the provided key then the callback will resolve with `error != nil`.
 
@@ -115,9 +115,6 @@ This method accepts a `FilterContentRequest` instance which allows for an array 
 
 ### Fetching multiple Content Items in a single request
 
-
-#### Get content items by delivery ID
-
 Fetch multiple by delivery id e.g.,
 
 ```swift
@@ -127,14 +124,11 @@ ContentClient.getInstance.listContentById(ids: [
 ]);
 ```
 
-#### Get content items by key
-
-Fetch multiple by delivery key e.g.,
+or by delivery key e.g.,
 
 ```swift
 ContentClient.getInstance.listContentByKey(keys: ["blog/article-1", "blog/article-2"]);
 ```
-
 
 ### Preview staging content
 
