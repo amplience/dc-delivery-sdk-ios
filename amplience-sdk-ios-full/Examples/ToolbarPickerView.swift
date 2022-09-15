@@ -30,6 +30,7 @@ class ToolbarPickerView: UIPickerView {
     
     private func commonInit() {
         let toolBar = UIToolbar()
+        toolBar.frame = CGRect(x: 0, y: 0, width: frame.width, height: 40)
         toolBar.barStyle = UIBarStyle.default
         toolBar.isTranslucent = true
         toolBar.tintColor = .black

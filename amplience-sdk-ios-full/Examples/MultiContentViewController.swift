@@ -62,7 +62,7 @@ extension MultiContentViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return indexPath.row != 2 ? 250 : UITableView.automaticDimension
+        return indexPath.row != 2 ? 250 : 50
     }
 }
 
