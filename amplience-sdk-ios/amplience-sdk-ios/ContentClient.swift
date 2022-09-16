@@ -51,7 +51,7 @@ public class ContentClient {
         get {
             if let virtualStagingEnvironmenetUrl = stagingEnvironment {
                 // Formulates the virtual staging environment URL as per: https://amplience.com/blog/preview-native-apps-with-dynamic-content-and-appetize/
-                return "https://\(virtualStagingEnvironmenetUrl)"
+                return "https://\(virtualStagingEnvironmenetUrl)/"
             }
             return "https://\(configuration.hub).cdn.content.amplience.net/"
         }
@@ -61,7 +61,7 @@ public class ContentClient {
         get {
             if let virtualStagingEnvironmenetUrl = stagingEnvironment {
                 // Formulates the virtual staging environment URL as per: https://amplience.com/blog/preview-native-apps-with-dynamic-content-and-appetize/
-                return "https://\(virtualStagingEnvironmenetUrl)"
+                return "https://\(virtualStagingEnvironmenetUrl)/"
             }
             
             return "https://\(configuration.hub).fresh.content.amplience.net/"
