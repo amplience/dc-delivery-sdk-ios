@@ -13,7 +13,6 @@ class BannerViewController: UIViewController {
     @IBOutlet private weak var bottomLabel: UILabel!
     @IBOutlet private weak var buyButton: UIButton!
     @IBOutlet private weak var bannerImageView: UIImageView!
-    @IBOutlet private weak var altTextLabel: UILabel!
     
     private var banner: Banner? {
         didSet {
@@ -62,7 +61,6 @@ class BannerViewController: UIViewController {
         topLabel.text = banner.headline
         bottomLabel.text = banner.strapline
         buyButton.setTitle(banner.link?.title, for: .normal)
-        altTextLabel.text = banner.background?.alt ?? ""
         if let bg = banner.background?.image {
             let url = bg.getImageUrl(builder: ImageUrlBuilder())
             ImageLoader.shared.loadImage(urlString: url, completion: { [weak self] image in
