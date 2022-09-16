@@ -13,8 +13,11 @@ class MenuTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         ContentClient.getInstance.configuration = Configuration(hub: "ampproduct-doc", isFresh: false)
-
     }
     
     // MARK: - Table view data source
