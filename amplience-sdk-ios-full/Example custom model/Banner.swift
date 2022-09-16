@@ -11,20 +11,15 @@ struct Banner: Codable {
     let background: Background? // should be replaced with Background object
     let headline: String?
     let strapline: String?
-    let callToActionText: String?
-    let callToActionUrl: String?
     let link: Link?
 
     private enum CodingKeys: String, CodingKey {
         case background, headline, strapline, link
-        case callToActionText = "calltoactiontext", callToActionUrl = "calltoactionurl"
     }
 
     init(dict: [String: AnyCodable]) {
         headline = dict[CodingKeys.headline.rawValue]!.value as? String
         strapline = dict[CodingKeys.strapline.rawValue]!.value as? String
-        callToActionText = dict[CodingKeys.callToActionText.rawValue]!.value as? String
-        callToActionUrl = dict[CodingKeys.callToActionUrl.rawValue]!.value as? String
         background = Background(dict: dict[CodingKeys.background.rawValue]!.value as! [String: Any])
         if let linkDict = dict[CodingKeys.link.rawValue]?.value as? [String: Any] {
             link = Link(dict: linkDict)
@@ -36,8 +31,6 @@ struct Banner: Codable {
     init(dict: [String: Any]) {
         headline = dict[CodingKeys.headline.rawValue] as? String
         strapline = dict[CodingKeys.strapline.rawValue] as? String
-        callToActionText = dict[CodingKeys.callToActionText.rawValue] as? String
-        callToActionUrl = dict[CodingKeys.callToActionUrl.rawValue] as? String
         background = Background(dict: dict[CodingKeys.background.rawValue] as! [String: Any])
         if let linkDict = dict[CodingKeys.link.rawValue] as? [String: Any] {
             link = Link(dict: linkDict)

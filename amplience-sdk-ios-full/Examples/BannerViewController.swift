@@ -32,13 +32,14 @@ class BannerViewController: UIViewController {
     }
     
     @IBAction func buyButtonPresse(_ sender: Any) {
-        if let urlString = banner?.link?.url ?? banner?.callToActionUrl, let url = URL(string: urlString) {
+        if let urlString = banner?.link?.url, let url = URL(string: urlString) {
             UIApplication.shared.open(url)
         }
     }
     
     private func loadBanner() {
-        ContentClient.getInstance.getContentByKey(key: "example-key") { [weak self] response, error in
+        ContentClient.getInstance.configuration = Configuration(hub: "docsportal", isFresh: false)
+        ContentClient.getInstance.getContentByKey(key: "banner-example") { [weak self] response, error in
             guard let self = self else { return }
             if error != nil {
                 print(error!.localizedDescription)
@@ -60,7 +61,7 @@ class BannerViewController: UIViewController {
        
         topLabel.text = banner.headline
         bottomLabel.text = banner.strapline
-        buyButton.setTitle(banner.link?.title ?? banner.callToActionText, for: .normal)
+        buyButton.setTitle(banner.link?.title, for: .normal)
         altTextLabel.text = banner.background?.alt ?? ""
         if let bg = banner.background?.image {
             let url = bg.getImageUrl(builder: ImageUrlBuilder())

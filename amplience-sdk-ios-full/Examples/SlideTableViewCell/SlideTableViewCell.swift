@@ -33,7 +33,7 @@ class SlideTableViewCell: UITableViewCell {
     }
     
     @IBAction private func actionButtonPressed(_ sender: Any) {
-        if let urlString = banner?.link?.url ?? banner?.callToActionUrl, let url = URL(string: urlString) {
+        if let urlString = banner?.link?.url, let url = URL(string: urlString) {
             delegate?.didPressAction(with: url)
         }
     }
@@ -53,7 +53,7 @@ class SlideTableViewCell: UITableViewCell {
         self.banner = banner
         topTitleLabel.text = banner.headline
         bottomTitleLabel.text = banner.strapline
-        actionButton.setTitle(banner.link?.title ?? banner.callToActionText, for: .normal)
+        actionButton.setTitle(banner.link?.title, for: .normal)
         actionButton.isHidden = false
         altTextLabel.text = banner.background?.alt ?? ""
         if let bg = banner.background?.image {
