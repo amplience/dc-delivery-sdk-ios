@@ -83,6 +83,7 @@
 		B08C2ECF283F95D30000B1AE /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
 		B08C2ED3283FA0250000B1AE /* AnyCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyCodable.swift; sourceTree = "<group>"; };
 		B08C2EE0283FADBF0000B1AE /* AmplienceVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmplienceVideo.swift; sourceTree = "<group>"; };
+		B0ED2F0328DB69B400E30867 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +108,7 @@
 		2DE141E6282AF30800AD741E = {
 			isa = PBXGroup;
 			children = (
+				B0ED2F0328DB69B400E30867 /* Package.swift */,
 				2DE141F2282AF30800AD741E /* amplience-sdk-ios */,
 				2DE141F1282AF30800AD741E /* Products */,
 			);
