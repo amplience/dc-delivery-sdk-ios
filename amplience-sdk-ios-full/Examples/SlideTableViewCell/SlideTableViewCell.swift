@@ -17,7 +17,6 @@ class SlideTableViewCell: UITableViewCell {
     @IBOutlet private weak var bottomTitleLabel: UILabel!
     @IBOutlet private weak var bannerImageView: UIImageView!
     @IBOutlet private weak var actionButton: UIButton!
-    @IBOutlet private weak var altTextLabel: UILabel!
     
     weak var delegate: SlideTableViewCellDelegate?
     private var banner: Banner?
@@ -55,7 +54,6 @@ class SlideTableViewCell: UITableViewCell {
         bottomTitleLabel.text = banner.strapline
         actionButton.setTitle(banner.link?.title, for: .normal)
         actionButton.isHidden = false
-        altTextLabel.text = banner.background?.alt ?? ""
         if let bg = banner.background?.image {
             let url = bg.getImageUrl(builder: ImageUrlBuilder())
             ImageLoader.shared.loadImage(urlString: url, completion: { [weak self] image in
