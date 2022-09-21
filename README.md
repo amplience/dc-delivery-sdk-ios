@@ -30,7 +30,7 @@ This SDK is designed to help build client side and server side content managed a
 
 Add the following to your `Podfile`:
 ```
-pod 'Amplience', '~> 1.0.0'
+pod 'AmplienceDelivery', '~> 1.0.0'
 ```
 
 Or, quickly try out our examples:
