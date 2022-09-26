@@ -5,7 +5,7 @@
 > Official iOS SDK for the Amplience Dynamic Content Delivery API, written in Swift
 
 
-[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/Amplience.svg)](https://img.shields.io/cocoapods/v/Amplience.svg)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/AmplienceDelivery.svg)](https://img.shields.io/cocoapods/v/AmplienceDelivery.svg)
 
 This SDK is designed to help build client side and server side content managed applications.
 
