@@ -35,7 +35,7 @@ pod 'AmplienceDelivery', '~> 1.0.0'
 
 Or, quickly try out our examples:
 ```bash
-pod try Amplience
+pod try AmplienceDelivery
 ```
 
 ## Swift Package Manager
