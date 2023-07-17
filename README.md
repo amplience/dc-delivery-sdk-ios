@@ -1,5 +1,3 @@
-[![Amplience Dynamic Content](https://github.com/amplience/dc-delivery-sdk-js/raw/master/media/header.png)](https://amplience.com/dynamic-content)
-
 # dc-delivery-sdk-ios
 
 > Official iOS SDK for the Amplience Dynamic Content Delivery API, written in Swift
